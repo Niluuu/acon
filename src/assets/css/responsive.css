@@ -97,9 +97,9 @@
   .cc-block {
     margin-bottom: 20px;
   }
-  .tc-white {
+  .slider-row {
     position: relative;
-    width: 90%;
+    width: 90% !important;
     bottom: 0 !important;
     right: 13px !important;
     top: 120px !important;

@@ -19,7 +19,7 @@ export default class HeaderSlider extends Component {
             <a href="#" className="tc-img">
               <img src={img} alt="" style={{ height: "300px" }} />
             </a>
-            <div className="tc-white">
+            <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
               <a href="#" className="more">
                 Подробнее
@@ -30,7 +30,7 @@ export default class HeaderSlider extends Component {
             <a href="#" className="tc-img">
               <img src={img} alt="" style={{ height: "300px" }} />
             </a>
-            <div className="tc-white">
+            <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
               <a href="#" className="more">
                 Подробнее
@@ -41,7 +41,7 @@ export default class HeaderSlider extends Component {
             <a href="#" className="tc-img">
               <img src={img} alt="" style={{ height: "300px" }} />
             </a>
-            <div className="tc-white">
+            <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
               <a href="#" className="more">
                 Подробнее
