@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import IndexPage from "../src/page/indexPage";
 import Header from "../src/components/common/header";
 import Footer from "./components/common/footer";
+import CategoryPage from "./page/categoryPage";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <IndexPage />
+            </Route>
+            <Route path="/category">
+              <CategoryPage />
             </Route>
           </Switch>
         </div>
