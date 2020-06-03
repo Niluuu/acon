@@ -1,0 +1,35 @@
+html:lang(ar){
+    direction: rtl;
+    text-align: right;
+}
+html:lang(ar) .text-right{
+    text-align: left !important;
+}
+html:lang(ar) .views{
+    text-align: left;
+}
+html:lang(ar) .logo{
+    text-align: right;
+}
+html:lang(ar) .shb-title{
+    text-align: right;
+}
+html:lang(ar)  p{
+    text-align: right;
+}
+@media (min-width: 992px)
+{
+    html:lang(ar) .offset-lg-3 {
+        margin-right: 25%;
+    }
+}
+html:lang(ar) .view-link{
+    margin-left: 0;
+    margin-right: 10px;
+}
+html:lang(ar) .shb-block .text-right{
+    text-align: right !important;
+}
+html:lang(ar) .shb-block .text-left{
+    text-align: left !important;
+}

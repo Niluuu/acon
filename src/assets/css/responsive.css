@@ -1,0 +1,116 @@
+@media(max-width: 767px) {
+
+    .fp-image{
+        display: none !important;
+    }
+    .fpt-top{
+        position: relative;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .first-page-top{
+        background-size: cover;
+    }
+    .fpt-top .btn-transparent{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .fpt-center p{
+        display: none;
+    }
+    .fpt-center{
+        padding: 30px;
+    }
+    .fpt-title{
+        margin-bottom: 0;
+    }
+    .cc-price {
+        text-align: left;
+    }
+    .fpt-center{
+        position: relative;
+        top:0 !important;
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%)
+    }
+
+    .block-container .tc-white {
+        min-width: 100% !important;
+        position: relative;
+        top: 0;
+        left: 0 !important;
+        right: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .block-container .tc-silver-title {
+        font-size: 20px;
+    }
+
+    .block-container .tc-title {
+        font-size: 18px;
+    }
+    .bottom-block{
+        text-align: center;
+        background-size: cover;
+    }
+    .bottom-block img{
+        max-width: 100%;
+        display: none;
+    }
+    .bottom-block h2, .bottom-block .h2 {
+        font-size: 18px;
+    }
+
+    .bb-subtitle {
+        font-size: 14px;
+    }
+    .bb-abs{
+        position: relative;
+        top:0;
+        left: 0;
+        padding: 15px;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+    #footer{
+        padding: 0;
+        background: #474747;
+    }
+    .mobile-downloads{
+        padding: 10px 0;
+        border-bottom:1px solid #6c6c6c;
+    }
+    .mobile-downloads a{
+        display: block;
+        text-align: center;
+    }
+    .bottom-link-home{
+        text-align: center;
+    }
+    .bc-block{
+        margin-bottom: 20px;
+    }
+    .cc-block{
+        margin-bottom: 20px;
+    }
+    .top-carousel .tc-white{
+        position: relative;
+        bottom:0;
+        right: 0;
+    }
+    .top-carousel .tc-img{
+        display: none;
+    }
+    .top-carousel .tc-block{
+        padding: 120px 20px 50px;
+        background-size: cover;
+    }
+    #header{
+        background: #fff;
+    }
+
+}
