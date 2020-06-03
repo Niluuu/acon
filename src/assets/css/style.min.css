@@ -846,6 +846,7 @@ ul.list-unstyled li {
 }
 #content {
   padding-bottom: 80px;
+  padding-top: 50px;
 }
 .brands-container nav .nav-tabs {
   border-color: #dbdbdb;

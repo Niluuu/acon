@@ -11,23 +11,6 @@ function Filter() {
           </div>
         </div>
       </button>
-      <div class="filter-carousel owl-carousel">
-        <div class="item">
-          <a href="#" class="fil-link">
-            Kleider
-          </a>
-        </div>
-        <div class="item">
-          <a href="#" class="fil-link">
-            Kleider
-          </a>
-        </div>
-        <div class="item">
-          <a href="#" class="fil-link">
-            Kleider
-          </a>
-        </div>
-      </div>
     </div>
   );
 }
