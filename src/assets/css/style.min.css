@@ -2076,6 +2076,7 @@ strong {
 }
 .large-block ul li img {
   max-width: 100%;
+  min-width: 100%;
 }
 .flex-block {
   display: -webkit-box;

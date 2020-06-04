@@ -4,6 +4,7 @@ import IndexPage from "../src/page/indexPage";
 import Header from "../src/components/common/header";
 import Footer from "./components/common/footer";
 import CategoryPage from "./page/categoryPage";
+import SinglePage from "./page/singlePage";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route path="/category">
               <CategoryPage />
+            </Route>
+            <Route path="/single">
+              <SinglePage />
             </Route>
           </Switch>
         </div>
