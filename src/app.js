@@ -5,6 +5,7 @@ import Header from "../src/components/common/header";
 import Footer from "./components/common/footer";
 import CategoryPage from "./page/categoryPage";
 import SinglePage from "./page/singlePage";
+import CartPage from "./page/cartPage";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/single">
               <SinglePage />
+            </Route>
+            <Route path="/cart">
+              <CartPage/>
             </Route>
           </Switch>
         </div>
