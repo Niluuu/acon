@@ -9,10 +9,12 @@ import CartPage from "./page/cartPage";
 import OrderPage from "./page/orderPage";
 import ContactPage from "./page/contactPage";
 import WhyWePage from "./page/whyWePage";
+import Sidebar from "./components/common/sidebar";
 
 function App() {
   return (
     <div>
+      <Sidebar />
       <Header />
       <Router>
         <div>

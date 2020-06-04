@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react";
 import img from "../../assets/images/logo.jpg";
+import Sidebar from "./sidebar";
 
 function Header() {
   return (
@@ -7,11 +8,7 @@ function Header() {
       <div className="header-top-mobile">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col">
-              <a href="#" className="toggle-menu">
-                <i className="fa fa-bars" aria-hidden="true"></i>
-              </a>
-            </div>
+            <div className="col"></div>
             <div className="col">
               <a href="#" className="mobile-search-icon">
                 <i className="fa fa-search" aria-hidden="true"></i>
@@ -54,4 +51,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

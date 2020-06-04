@@ -8,6 +8,7 @@ import "../src/assets/css/responsive.css";
 import "../src/assets/css/bootstrap.min.css";
 import "../src/assets/css/ar.css";
 import "../src/assets/css/style.min.css";
+import "../src/assets/css/sidebar.css";
 
 ReactDOM.render(
   <React.StrictMode>
