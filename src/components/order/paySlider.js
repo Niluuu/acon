@@ -14,34 +14,34 @@ export default class PaySlider extends Component {
       slidesToScroll: 3,
     };
     return (
-      <div class="shadow-container ">
-        <h4 class="mb-20px">Способы оплаты</h4>
+      <div className="shadow-container ">
+        <h4 className="mb-20px">Способы оплаты</h4>
         <Slider {...settings}>
-          <div class="so item">
+          <div className="so item">
             <img src={img1} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img2} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img3} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img1} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img2} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img3} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img1} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img2} alt="" />
           </div>
-          <div class="so item">
+          <div className="so item">
             <img src={img3} alt="" />
           </div>
         </Slider>

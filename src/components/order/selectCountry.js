@@ -5,8 +5,8 @@ import api from "./country.json";
 function SelectCountry() {
   console.log("country", api.country);
   return (
-    <div class="row">
-      <div class="col-sm-8">
+    <div className="row">
+      <div className="col-sm-8">
         <Form.Control as="select" size="lg">
           {api.country.map(({ file_url, name }) => {
             return <option value={name}>{name}</option>;

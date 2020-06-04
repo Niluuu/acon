@@ -5,7 +5,7 @@ import Tab from "react-bootstrap/Tab";
 function TabsRow() {
   const [key, setKey] = useState("Beschereibung");
   return (
-    <div class="single-tabs mb-50px">
+    <div className="single-tabs mb-50px">
       <Tabs
         id="controlled-tab-example"
         activeKey={key}
@@ -44,11 +44,11 @@ function TabsRow() {
             <p>
               <strong>Artikelnummer:</strong> JL021A00S-I11
             </p>
-            <div class="single-bottom-btns">
-              <a href="#" class="black-link">
+            <div className="single-bottom-btns">
+              <a href="#" className="black-link">
                 Jaded London
               </a>
-              <a href="#" class="btn btn-orange b-50">
+              <a href="#" className="btn btn-orange b-50">
                 Folgen
               </a>
             </div>

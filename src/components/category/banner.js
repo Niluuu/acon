@@ -3,10 +3,10 @@ import img from "../../assets/images/tmp/b1.jpg";
 
 function Banner() {
   return (
-    <div class="top-category-container">
+    <div className="top-category-container">
       <img src={img} alt="" />
-      <div class="tcc-abs">
-        <div class="tcc-title">Siksils</div>
+      <div className="tcc-abs">
+        <div className="tcc-title">Siksils</div>
       </div>
     </div>
   );

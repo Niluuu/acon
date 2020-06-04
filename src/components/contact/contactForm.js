@@ -2,53 +2,53 @@ import React from "react";
 
 function ContactForm() {
   return (
-    <div class="contact-form-block">
-      <div class="cfb-title">Связаться с нами</div>
+    <div className="contact-form-block">
+      <div className="cfb-title">Связаться с нами</div>
       <form action="">
-        <div class="form-file">
-          <div class="upload-btn-wrapper">
-            <button class="btn btn-orange">Загрузить резюме</button>
+        <div className="form-file">
+          <div className="upload-btn-wrapper">
+            <button className="btn btn-orange">Загрузить резюме</button>
             <input type="file" name="myfile" />
           </div>
           <span>Максимум 1 файл размером не более 10 МБ</span>
         </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="form-group">
               <label for="">Фамилия, Имя, Отчество</label>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="form-group">
+          <div className="col-sm-6">
+            <div className="form-group">
               <label for="">Тема сообщения</label>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="form-group">
+          <div className="col-sm-6">
+            <div className="form-group">
               <label for="">E-mail</label>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <label for="">Телефон</label>
-              <input type="text" class="form-control" />
+              <input type="text" className="form-control" />
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="form-group">
+          <div className="col-sm-6">
+            <div className="form-group">
               <label for="">Дополнительная информация</label>
               <textarea
                 name=""
                 id=""
                 cols="30"
                 rows="10"
-                class="form-control"
+                className="form-control"
               ></textarea>
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-default bordered">
+        <button type="submit" className="btn btn-default bordered">
           Отправить
         </button>
       </form>

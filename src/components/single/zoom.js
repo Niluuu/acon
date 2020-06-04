@@ -7,18 +7,18 @@ function Zoom() {
   return (
     <div className="col-sm-6">
       <div className="flex-block">
-        <div class="small-block">
+        <div className="small-block">
           <ul>
-            <li class="active ">
-              <div class="sb-image-container">
-                <div class="sb-image">
+            <li className="active ">
+              <div className="sb-image-container">
+                <div className="sb-image">
                   <img src={img1} alt="" />
                 </div>
               </div>
             </li>
             <li>
-              <div class="sb-image-container">
-                <div class="sb-image">
+              <div className="sb-image-container">
+                <div className="sb-image">
                   <img src={img2} alt="" />
                 </div>
               </div>
@@ -28,16 +28,16 @@ function Zoom() {
 
         {/* largeBlock */}
 
-        <div class="large-block zoom">
+        <div className="large-block zoom">
           <ul>
-            <li class="active">
-              <div class="large-photo">
-                <img id="bigImg" class="bigImg" src={zoomed} alt="" />
+            <li className="active">
+              <div className="large-photo">
+                <img id="bigImg" className="bigImg" src={zoomed} alt="" />
               </div>
             </li>
             <li>
-              <div class="large-photo">
-                <img id="bigImg" class="bigImg" src={img1} alt="" />
+              <div className="large-photo">
+                <img id="bigImg" className="bigImg" src={img1} alt="" />
               </div>
             </li>
           </ul>

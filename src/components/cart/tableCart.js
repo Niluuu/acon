@@ -8,42 +8,42 @@ function TableCart({product}) {
         return (
           <tr>
             <td>
-              <div class="cart-single-block">
-                <div class="csb-image">
+              <div className="cart-single-block">
+                <div className="csb-image">
                   <img src={img} alt="" />
                 </div>
               </div>
             </td>
             <td>
-              <div class="csb-info">
-                <div class="csb-link">A.Kjrbede</div>
-                <div class="csb-subtitle">
+              <div className="csb-info">
+                <div className="csb-link">A.Kjrbede</div>
+                <div className="csb-subtitle">
                   WIVI - Sonnenbrille - gold-coloured/pink
                 </div>
-                <div class="csb-info-list">
-                  <div class="csb-text">Farbe: gold</div>
-                  <div class="csb-text">Grobe: One Size </div>
+                <div className="csb-info-list">
+                  <div className="csb-text">Farbe: gold</div>
+                  <div className="csb-text">Grobe: One Size </div>
                 </div>
-                <div class="csb-bottom">
-                  <a href="#" class="delete">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i> Удалить
+                <div className="csb-bottom">
+                  <a href="#" className="delete">
+                    <i className="fa fa-trash-o" aria-hidden="true"></i> Удалить
                   </a>
                   <a href="#">
-                    <i class="fa fa-heart-o" aria-hidden="true"></i> В избранное
+                    <i className="fa fa-heart-o" aria-hidden="true"></i> В избранное
                   </a>
                 </div>
               </div>
             </td>
             <td>
-              <div class="cart-counts">
-                <select name="" id="" class="sel">
+              <div className="cart-counts">
+                <select name="" id="" className="sel">
                   <option value="">1</option>
                   <option value="">1</option>
                   <option value="">1</option>
                   <option value="">1</option>
                   <option value="">1</option>
                 </select>
-                <div class="csb-price">29,95 $</div>
+                <div className="csb-price">29,95 $</div>
               </div>
             </td>
           </tr>

@@ -8,16 +8,16 @@ import CartCategory from "../components/cart/cartCategory";
 function CartPage() {
   return (
     <section id="content">
-      <div class="cart-container">
-        <div class="container">
-          <div class="row mb-30px">
-            <div class="col-sm-8">
-              <div class="shadow-container">
-                <h3 class="mb-20px">Warenkorb (3 Artikel)</h3>
+      <div className="cart-container">
+        <div className="container">
+          <div className="row mb-30px">
+            <div className="col-sm-8">
+              <div className="shadow-container">
+                <h3 className="mb-20px">Warenkorb (3 Artikel)</h3>
                 <Table />
-                <div class="cart-question">
+                <div className="cart-question">
                   <a href="#">
-                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>{" "}
+                    <i className="fa fa-exclamation-circle" aria-hidden="true"></i>{" "}
                     Artikel im Warenkorb werden nicht reserviert.
                   </a>
                 </div>

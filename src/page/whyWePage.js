@@ -5,13 +5,13 @@ import Vacancy from "../components/whyWe/vacancy";
 function WhyWePage() {
   return (
     <section id="content">
-      <div class="container">
-        <div class="page-title text-center">
+      <div className="container">
+        <div className="page-title text-center">
           <h1>К чему мы стремимся?</h1>
         </div>
-        <div class="row">
-          <div class="offset-sm-2 col-sm-8">
-            <div class="page-subtitle text-center">
+        <div className="row">
+          <div className="offset-sm-2 col-sm-8">
+            <div className="page-subtitle text-center">
               Ориентиры, которые помогают нам принимать верные решения в любых
               ситуациях:
             </div>

@@ -15,26 +15,26 @@ function CategoryList() {
 
 const Item = () => {
   return (
-    <div class="col-sm-4 col-6">
-      <div class="cc-block">
-        <a href="#1" class="wish-icon">
-          <i class="fa fa-heart-o" aria-hidden="true"></i>
+    <div className="col-sm-4 col-6">
+      <div className="cc-block">
+        <a href="#1" className="wish-icon">
+          <i className="fa fa-heart-o" aria-hidden="true"></i>
         </a>
-        <a href="#" class="cc-image">
+        <a href="#" className="cc-image">
           <img src={img} alt="" />
         </a>
-        <div class="cc-content">
-          <div class="row">
-            <div class="col-sm-7">
-              <a href="#" class="cc-title">
+        <div className="cc-content">
+          <div className="row">
+            <div className="col-sm-7">
+              <a href="#" className="cc-title">
                 Zara
               </a>
-              <div class="cc-category">
+              <div className="cc-category">
                 <a href="#">Сникерсы</a>
               </div>
             </div>
-            <div class="col-sm-5">
-              <div class="cc-price" style={{ textAlign: "initial" }}>
+            <div className="col-sm-5">
+              <div className="cc-price" style={{ textAlign: "initial" }}>
                 204,95 €
               </div>
             </div>

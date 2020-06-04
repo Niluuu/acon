@@ -3,11 +3,11 @@ import img from "../../assets/images/tmp/wb1.png";
 
 function Vacancy() {
   return (
-    <div class="vacancy-single why-block">
-      <div class="row align-items-center">
-        <div class="col-sm-8">
-          <div class="left-vacancy">
-            <div class="wb-title">К чему мы стремимся?</div>
+    <div className="vacancy-single why-block">
+      <div className="row align-items-center">
+        <div className="col-sm-8">
+          <div className="left-vacancy">
+            <div className="wb-title">К чему мы стремимся?</div>
             <p>
               <strong>Миссия Ason</strong> — cоздать уникальное
               fashion-пространство в Сети России и СНГ и предоставить лучший
@@ -27,8 +27,8 @@ function Vacancy() {
             </p>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="wb-image">
+        <div className="col-sm-4">
+          <div className="wb-image">
             <img src={img} alt="" />
           </div>
         </div>

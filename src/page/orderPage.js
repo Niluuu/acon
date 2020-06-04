@@ -8,33 +8,33 @@ import PaySlider from "../components/order/paySlider";
 function OrderPage() {
   return (
     <section id="content">
-      <div class="text-center">
-        <h1 class="mb-40px">Оформление Заказа</h1>
+      <div className="text-center">
+        <h1 className="mb-40px">Оформление Заказа</h1>
       </div>
-      <div class="cart-container">
-        <div class="container">
-          <div class="row mb-30px">
-            <div class="col-sm-8">
-              <div class="shadow-container">
-                <h4 class="mb-20px">Страна доставки</h4>
+      <div className="cart-container">
+        <div className="container">
+          <div className="row mb-30px">
+            <div className="col-sm-8">
+              <div className="shadow-container">
+                <h4 className="mb-20px">Страна доставки</h4>
                 <SelectCountry />
               </div>
-              <div class="shadow-container">
-                <h4 class="mb-20px">Адрес электронной почты</h4>
-                <div class="zakaz-email">company1234@gmail.com</div>
+              <div className="shadow-container">
+                <h4 className="mb-20px">Адрес электронной почты</h4>
+                <div className="zakaz-email">company1234@gmail.com</div>
               </div>
               <OrderForm />
               <OrderedProducts />
               <Total />
               <PaySlider />
-              <div class="zakaz-buttons d-md-none d-block">
-                <div class="row align-items-center">
-                  <div class="col-sm-4">
-                    <a href="#" class="btn btn-default bordered mb-20px">
+              <div className="zakaz-buttons d-md-none d-block">
+                <div className="row align-items-center">
+                  <div className="col-sm-4">
+                    <a href="#" className="btn btn-default bordered mb-20px">
                       Заказать
                     </a>
                   </div>
-                  <div class="col-sm-8">
+                  <div className="col-sm-8">
                     <p>
                       Размещая заказ, вы принимаете наши Правила и условия,
                       Политику конфиденциальности и Политику возврата товаров.
