@@ -6,6 +6,7 @@ import Footer from "./components/common/footer";
 import CategoryPage from "./page/categoryPage";
 import SinglePage from "./page/singlePage";
 import CartPage from "./page/cartPage";
+import OrderPage from "./page/orderPage";
 
 function App() {
   return (
@@ -24,7 +25,10 @@ function App() {
               <SinglePage />
             </Route>
             <Route path="/cart">
-              <CartPage/>
+              <CartPage />
+            </Route>
+            <Route path="/order">
+              <OrderPage />
             </Route>
           </Switch>
         </div>
