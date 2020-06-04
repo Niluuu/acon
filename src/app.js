@@ -8,6 +8,7 @@ import SinglePage from "./page/singlePage";
 import CartPage from "./page/cartPage";
 import OrderPage from "./page/orderPage";
 import ContactPage from "./page/contactPage";
+import WhyWePage from "./page/whyWePage";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <ContactPage />
+            </Route>
+            <Route path="/whyWe">
+              <WhyWePage />
             </Route>
           </Switch>
         </div>
