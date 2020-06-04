@@ -3,6 +3,7 @@ import Table from "../components/cart/table";
 import Days from "../components/cart/days";
 import OrderInfo from "../components/cart/orderInfo";
 import CategoryList from "../components/category/categoryList";
+import CartCategory from "../components/cart/cartCategory";
 
 function CartPage() {
   return (
@@ -25,7 +26,7 @@ function CartPage() {
             </div>
             <OrderInfo />
           </div>
-         <CategoryList/>
+          <CartCategory />
         </div>
       </div>
     </section>
