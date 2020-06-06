@@ -5,12 +5,12 @@ import {
 } from "./action";
 
 const initialState = {
-  items: [],
+  menuItems: [],
   loading: false,
   error: null,
 };
 
-export default function productReducer(state = initialState, action) {
+export default function menu(state = initialState, action) {
   switch (action.type) {
     case FETCH_PRODUCTS_BEGIN:
       return {
@@ -23,14 +23,14 @@ export default function productReducer(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        items: action.payload.products,
+        menuItems: action.payload.products,
       };
     case FETCH_PRODUCTS_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload.error,
-        items: [],
+        menuItems: [],
       };
     default:
       return state;

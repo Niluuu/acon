@@ -13,9 +13,18 @@ import "../src/assets/css/sidebar.css";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "./rootReducer";
+import { combineReducers } from "redux";
+import menuReducer from "./components/common/redux/reducer";
+import categoryReducer from "./components/category/redux/reducer";
+
+const rootReducer = combineReducers({
+  menuReducer: menuReducer,
+  categoryReducer: categoryReducer,
+});
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
+
+console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
