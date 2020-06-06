@@ -1,10 +1,10 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: relative;
   width: 16px;
   height: 13px;
   left: 26px;
-  top: 30px;
+  top: 44px;
 }
 
 /* Color/shape of burger icon bars */
@@ -36,7 +36,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
-  width: 200px !important;
+  width: 280px !important;
 }
 
 /* General sidebar styles */
@@ -65,4 +65,67 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.categories-menu {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 40px;
+  text-align: left;
+  padding: 0 8px;
+}
+
+.categories-menu__link,
+.categories-menu__link:visited {
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+}
+
+.categories-menu__link_main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.down_icon_btn {
+  transition: 20ms;
+  position: relative;
+  float: right;
+  margin-top: 6px;
+  transform: rotate(-177deg);
+  transition: 0.3s;
+}
+
+.icon_rotated {
+  transform: rotate(0deg);
+}
+
+.categories-menu__submenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.categories-menu__submenu a {
+  font-weight: normal !important;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: capitalize !important;
+  text-overflow: ellipsis;
+}
+
+.my_accordion_btn_cont {
+  font-weight: bold;
 }

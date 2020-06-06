@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderSlider from "./headerSlider";
 import CatalogSlider from "./catalogSlider";
 import NameWithLink from "../index/nameWithLink";
