@@ -3,28 +3,18 @@ import Banner from "../components/category/banner";
 import Filter from "../components/category/filter";
 import CategoryList from "../components/category/categoryList";
 import { connect } from "react-redux";
-import { fetchFunc } from "../components/category/redux/action";
-import axios from "axios";
+import { fetchFunc } from "../redux/categoryPage/action";
 
 class CategoryPage extends Component {
-  state = {
-    items: {},
-  };
-
   componentDidMount() {
-    // this.props.dispatch(fetchFunc());
-
-    axios
-      .get("https://mod.uz/mdapi/v1/categories/18")
-      .then((data) => this.setState({ items: data.data }));
+    this.props.dispatch(fetchFunc());
   }
 
   render() {
-    // console.log("category", this.props);
-    const { items } = this.state;
+    const { category } = this.props;
     return (
       <section id="content" className="mt-50px">
-        {items && items.products && items.products.data && (
+        {category && category.products && category.products.data && (
           <div className="category-container">
             <div className="container">
               <div className="row">
@@ -33,7 +23,7 @@ class CategoryPage extends Component {
                     <h1>Damenbekleidung</h1>
                     <Banner />
                     <Filter />
-                    <CategoryList items={items.products.data} />
+                    <CategoryList items={category.products.data} />
                   </div>
                 </div>
               </div>

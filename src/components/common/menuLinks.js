@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { connect } from "react-redux";
-import { fetchProducts } from "../common/redux/action";
+import { fetchProducts } from "../../redux/menu/action";
 import CustomToggle from "./custumToogle";
 import Spinner from "react-bootstrap/Spinner";
 
@@ -11,7 +11,7 @@ class Sidebar extends Component {
   }
 
   render() {
-    // console.log("menu", this.props.products);
+    // console.log("menu", this.props);
     const { items, loading, error } = this.props;
     return (
       <div>

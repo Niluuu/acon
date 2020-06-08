@@ -15,8 +15,8 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { combineReducers } from "redux";
-import menu from "./components/common/redux/reducer";
-import category from "./components/category/redux/reducer";
+import menu from "./redux/menu/reducer";
+import category from "./redux/categoryPage/reducer";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 const rootReducer = combineReducers({
