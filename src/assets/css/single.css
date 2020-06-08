@@ -276,6 +276,7 @@
   border: 1px solid #7b7b7b;
   padding: 5px 20px;
   border-radius: 5px;
+  width: max-content;
 }
 
 .categorys_slider input {
@@ -284,9 +285,15 @@
 }
 
 .categorys_slider .slick-slider {
-  width: 100% !important;
+  width: max-content !important;
 }
 
 .categorys_slider .slick-slider div {
   width: max-content !important;
+}
+
+.show_category_active p {
+  background: #f5f5f5;
+  opacity: 0.5;
+  border: none;
 }

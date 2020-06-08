@@ -4,9 +4,7 @@ import Slider from "react-slick";
 const data = [
   "Все брюки",
   "Все куртки Puma",
-  "Все брюки",
   "Все куртки Puma",
-  "Все брюки",
   "Все куртки Puma",
 ];
 
@@ -16,7 +14,7 @@ export default class CategorySlider extends Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 2,
       slidesToScroll: 1,
     };
     return (
