@@ -17,10 +17,10 @@ class indexPage extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  products: state.products,
-  loading: state.products.loading,
-  error: state.products.error,
-});
+// const mapStateToProps = (state) => ({
+//   products: state.products,
+//   loading: state.products.loading,
+//   error: state.products.error,
+// });
 
-export default connect(mapStateToProps)(indexPage);
+export default indexPage;

@@ -1,125 +1,69 @@
 import React from "react";
-import img1 from "../../assets/images/tmp/j1.jpg";
-import img2 from "../../assets/images/car-icon-ne.jpg";
-import img3 from "../../assets/images/car-icon.jpg";
+import CategorySlider from "../single/categorySlider";
+import Tabs from "./tabs";
 
 function Description() {
   return (
     <div className="col-sm-6">
       <div className="single-main-block">
-        <h4>EXCLUSIVEPANELLED WIDE LEG - Jogginghose </h4>
-        <div className="top-smb mb-10px">
-          <div className="row">
-            <div className="col-sm-6">
-              <div className="tsmb-silver">Jaded London</div>
-              <div className="tsmb-silver-second">
-                Farbe: <strong>purple</strong>
-              </div>
+        <div className="flex_just_bet border_top">
+          <div>
+            <div>
+              <h2 className="light text-capitalize">Стандартная</h2>
+              <p className="light">доставка</p>
             </div>
-            <div className="col-sm-6">
-              <div className="tsmb-image">
-                <img src={img1} alt="" className="img-fluid" />
-              </div>
+            <div>
+              <h2 className="text-capitalize">бесплатно </h2>
+              <p>2-4 рабочих дня </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2 className="light text-capitalize">Экспресс</h2>
+              <p className="light">доставка</p>
+            </div>
+            <div>
+              <h2 className="text-capitalize">70 000 UZS </h2>
+              <p> 1-2 рабочих дня</p>
             </div>
           </div>
         </div>
-        <div className="tmb-price">64,95 €</div>
-        <div className="smb-list">
-          <ul className="list-unstyled">
-            <li>
-              <div className="row">
-                <div className="col-sm-6">
-                  <strong>Material Oberstoff:</strong>
-                </div>
-                <div className="col-sm-6">
-                  <p>Jersey</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="row">
-                <div className="col-sm-6">
-                  <strong>Material Oberstoff:</strong>
-                </div>
-                <div className="col-sm-6">
-                  <p>Jersey</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="row">
-                <div className="col-sm-6">
-                  <strong>Material Oberstoff:</strong>
-                </div>
-                <div className="col-sm-6">
-                  <p>Jersey</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="row">
-                <div className="col-sm-6">
-                  <strong>Material Oberstoff:</strong>
-                </div>
-                <div className="col-sm-6">
-                  <p>Jersey</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div className="row">
-                <div className="col-sm-6">
-                  <strong>Material Oberstoff:</strong>
-                </div>
-                <div className="col-sm-6">
-                  <p>Jersey</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div className="two-buttons-smb">
-          <div className="row">
-            <div className="col-sm-6">
-              <button className="tb-btn">ONE SIZE </button>
+        <div className="flex_just_bet description">
+          <div className="info_row">
+            <div className="info">
+              <p className="light text-capitalize">Цвет</p>
+              <p>Фиолетовый</p>
             </div>
-            <div className="col-sm-6">
-              <a href="#" className="btn btn-orange ">
-                In de n Warenkorb
-              </a>
+            <div className="info">
+              <p className="light text-capitalize">Состав</p>
+              <p>Полиэстер 100%</p>
+            </div>
+            <div className="info">
+              <p className="light text-capitalize">Страна</p>
+              <p>Италия</p>
+            </div>
+          </div>
+          <div className="info_row">
+            <div className="info">
+              <p className="light text-capitalize">Материал</p>
+              <p>Джерси</p>
+            </div>
+            <div className="info">
+              <p className="light text-capitalize">Уход</p>
+              <p>Ручная стирка</p>
             </div>
           </div>
         </div>
-        <div className="block-after-btn-smb mb-15px">
-          <div className="row">
-            <div className="col-sm-6">
-              <div className="bab-single-one clearfix">
-                <img src={img2} alt="" />
-                <div className="babs-info">
-                  <strong>Standard-Lieferung</strong> kostenlos 2-4 Werktage
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6">
-              <div className="bab-single-one clearfix">
-                <img src={img3} alt="" />
-                <div className="babs-info">
-                  <strong>Express</strong> 7,90 €<br />
-                  Lieferung verfügbar
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="btns-bottom mb-25px">
-          <button className="btn-silver btn active">Все брюки</button>
-          <button className="btn-silver btn">Все куртки Puma</button>
-          <button className="btn-silver btn">Все куртки</button>
-        </div>
-        <a href="#" className=" btn normal-btn">
-          Остались вопросы{" "}
-          <i className="fa fa-question-circle" aria-hidden="true"></i>
-        </a>
+      </div>
+      <div className="categorys border_top border_bottom flex_just_bet">
+        <CategorySlider />
+      </div>
+      <div className="categorys faq_row flex_just_bet">
+        <h2>Остались вопросы?</h2>
+        <button className="connect_us">Написать нам</button>
+      </div>
+      <div className="categorys border_top flex_just_bet">
+        <Tabs />
       </div>
     </div>
   );

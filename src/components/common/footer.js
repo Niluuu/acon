@@ -1,28 +1,17 @@
 import React from "react";
-import img1 from "../../assets/images/appstore-d.png";
-import img2 from "../../assets/images/google-play-d.png";
+import FooterCollapse from "./footerCollapse";
 
 function Footer() {
   return (
-    <footer id="footer">
+    <footer id="footer" className="footer">
       <div className="d-md-none d-block">
-        <div className="mobile-downloads">
-          <div className="row align-items-center justify-content-center">
-            <div className="col-6">
-              <a href="#">
-                <img src={img1} alt="" className="img-fluid" />
-              </a>
-            </div>
-            <div className="col-6">
-              <a href="#">
-                <img src={img2} alt="" className="img-fluid" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="bottom-link-home">
-          <a href="#">Перейти на основной сайт</a>
-        </div>
+        <FooterCollapse />
+        <p className="footer-text">
+          Официальный сайт MOD. ‘MOD’ и логотип ‘MOD’ являются торговыми марками
+          Farfetch UK Limited и зарегистрированы в многочисленных юрисдикционных
+          системах по всему миру. © Copyright 2020 MOD UK Limited. Все права
+          защищены.
+        </p>
       </div>
     </footer>
   );

@@ -77,8 +77,41 @@
     transform: translateY(0%) !important;
   }
   #footer {
-    padding: 0 !important;
-    background: #474747 !important;
+    padding: 20px !important;
+    background: #f5f5f5 !important;
+  }
+
+  #footer li {
+    padding: 10px;
+  }
+
+  #footer .footer-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #808080 !important;
+  }
+
+  #footer .light_collapse {
+    background: #ffffff !important;
+  }
+
+  #footer .light_collapse .my_accordion_btn_cont {
+    font-style: normal;
+    font-weight: thin;
+    font-size: 12px !important;
+    line-height: 14px;
+    color: #222222;
+    background: #ffffff !important;
+  }
+
+  #footer .categories-menu {
+    padding: 0px !important;
+  }
+
+  .header-top-mobile .mobile-search-icon {
+    padding-left: 8px;
   }
   .mobile-downloads {
     padding: 10px 0;

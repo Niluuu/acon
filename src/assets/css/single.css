@@ -1,0 +1,247 @@
+.simple_slider .cover_img {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.simple_slider .slick-dots {
+  display: block !important;
+  visibility: visible !important;
+  bottom: 6px;
+}
+
+.simple_slider .slick-dots li button:before {
+  color: #ffff !important;
+  opacity: 0.5;
+}
+
+.simple_slider .slick-dots li.slick-active button:before {
+  color: #ffff !important;
+  opacity: 0 !important;
+}
+
+.simple_slider .slick-dots li {
+  width: 10px !important;
+}
+
+.simple_slider .heart_icon {
+  position: relative;
+  float: right;
+  top: 32px;
+  padding-right: 15px;
+}
+
+.simple_slider .arrow_icon {
+  position: absolute;
+  top: 32px;
+  padding-left: 15px;
+}
+
+.top-single-container {
+  margin-top: -21px;
+  padding: 10px;
+}
+
+.flex_just_bet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_single .category {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.info_single .name {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.info_single .price {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.info_single .logo img {
+  width: 100px;
+  height: 32.35px;
+}
+
+.size_slider input {
+  height: 65px;
+  width: 49px;
+  opacity: 0;
+}
+
+.size_slider .show_size {
+  margin-top: -64px;
+  background-color: #f5f5f5;
+  padding: 0px 27px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.size_slider .show_size p {
+  padding: 12px 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.size_slider .show_size .light {
+  padding-top: 0px !important;
+}
+
+.size_slider .show_size_active {
+  background-color: #fff;
+  border: 2px solid #000000;
+}
+
+.size_table .title {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.size_table .title_table {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.size_slider .slick-slider {
+  position: relative;
+  top: -90px;
+  margin-left: 69px;
+}
+
+.size_slider .sizes {
+  padding: 0px 10px !important;
+}
+
+.sizes .light {
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.5;
+}
+
+.sizes p {
+  font-size: 14px;
+  line-height: 16px;
+}
+.sizes .price_type p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 0px !important;
+  padding-top: 8px;
+}
+
+.price_type .light {
+  opacity: 0.5 !important;
+}
+
+.top-single-container .add_to_cart {
+  background: #222222 !important;
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none !important;
+  margin-bottom: 15px;
+}
+
+.top-single-container .add_to_cart img {
+  padding: 0px 10px;
+}
+
+.border_top {
+  border-top: 2px solid #ededed;
+  padding: 20px 0px;
+}
+
+.border_top {
+  border-bottom: 2px solid #ededed;
+  padding: 20px 0px;
+}
+
+.light {
+  opacity: 0.5;
+}
+
+.single-main-block .text-capitalize,
+.info .text-capitalize {
+  text-transform: uppercase !important;
+}
+
+.info_row .info p {
+  margin-bottom: 0px !important;
+}
+
+.single-main-block h2 {
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+}
+.single-main-block p {
+  margin-bottom: 10px;
+}
+
+.single-main-block .description {
+  padding: 20px 0px;
+}
+
+.slick-slide .categorys input {
+  opacity: 0;
+  width: 300px;
+  height: 20px;
+}
+
+.slick-slide .categorys .show_category {
+  text-transform: uppercase;
+  border: 2px solid #0000;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.slick-slide .categorys .show_category p {
+  width: 300px;
+}
+
+.single-main-block .slick-track {
+  width: 100% !important;
+}
+
+.categorys .connect_us {
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid #000;
+  background: transparent;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.categorys h2 {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.faq_row {
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+}
+
+
+.single-tabs .nav-tabs {
+  
+} 

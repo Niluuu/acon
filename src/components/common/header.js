@@ -1,18 +1,22 @@
 import React from "react";
-import img from "../../assets/images/logo.jpg";
-import Sidebar from "./sidebar";
+import img from "../../assets/images/MOD.png";
+import img1 from "../../assets/images/h1.png";
+import img2 from "../../assets/images/h2.png";
+import img3 from "../../assets/images/h3.png";
 
 function Header() {
   return (
-    <div className="d-block d-md-none">
+    <div className="d-block d-md-none header-container">
       <div className="header-top-mobile">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col"></div>
             <div className="col">
-              <a href="#" className="mobile-search-icon">
-                <i className="fa fa-search" aria-hidden="true"></i>
-              </a>
+              <div className="col"></div>
+              <div className="col">
+                <a href="#" className="mobile-search-icon">
+                  <img src={img1} alt="" />
+                </a>
+              </div>
             </div>
             <div className="col">
               <a href="#" className="mobile-logo">
@@ -21,30 +25,13 @@ function Header() {
             </div>
             <div className="col">
               <a href="#" className="heart-icon">
-                <i className="fa fa-heart-o" aria-hidden="true"></i>
+                <img src={img2} alt="" />
               </a>
-            </div>
-            <div className="col">
               <a href="#" className="cart-mobile">
-                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                <img src={img3} alt="" />
               </a>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="header-bottom-mobile">
-        <div className="container">
-          <ul className="row">
-            <li className="col">
-              <a href="#">Мужчинам</a>
-            </li>
-            <li className="col active">
-              <a href="#">Женщинам</a>
-            </li>
-            <li className="col">
-              <a href="#">Детям</a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>

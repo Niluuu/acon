@@ -9,20 +9,26 @@ import "../src/assets/css/bootstrap.min.css";
 import "../src/assets/css/ar.css";
 import "../src/assets/css/style.min.css";
 import "../src/assets/css/sidebar.css";
+import "../src/assets/css/single.css";
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { combineReducers } from "redux";
-import menuReducer from "./components/common/redux/reducer";
-import categoryReducer from "./components/category/redux/reducer";
+import menu from "./components/common/redux/reducer";
+import category from "./components/category/redux/reducer";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 const rootReducer = combineReducers({
-  menuReducer: menuReducer,
-  categoryReducer: categoryReducer,
+  menuReducer: menu,
+  categoryReducer: category,
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk),
+  composeWithDevTools()
+);
 
 console.log(store.getState());
 

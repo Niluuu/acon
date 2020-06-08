@@ -1,22 +1,22 @@
 import React from "react";
-import Zoom from "../components/single/zoom";
+
+import SimpleSlider from "../components/single/simpleSlider";
+import Info from "../components/single/info";
 import Description from "../components/single/description";
-import TabsRow from "../components/single/tabs";
-import Cart from "../components/single/cart";
+import img from "../assets/images/light-basket.png";
 
 function SinglePage() {
   return (
-    <section id="content">
-      <div className="container">
-        <div className="top-single-container mb-45px">
-          <div className="row">
-            <Zoom />
-            <Description />
-            <TabsRow />
-          </div>
-        </div>
+    <section>
+      <div className="top-single-container mb-45px">
+        <SimpleSlider />
+        <Info />
+        <button className="add_to_cart">
+          {" "}
+          <img src={img} alt="" /> добавить В корзину
+        </button>
+        <Description />
       </div>
-      <Cart />
     </section>
   );
 }

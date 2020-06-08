@@ -11,7 +11,7 @@ class Sidebar extends Component {
   }
 
   render() {
-    console.log("menu", this.props.items);
+    // console.log("menu", this.props.products);
     const { items, loading, error } = this.props;
     return (
       <div>
