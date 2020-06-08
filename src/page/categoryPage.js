@@ -13,13 +13,14 @@ class CategoryPage extends Component {
 
   componentDidMount() {
     // this.props.dispatch(fetchFunc());
+
     axios
       .get("https://mod.uz/mdapi/v1/categories/18")
       .then((data) => this.setState({ items: data.data }));
   }
 
   render() {
-    // console.log("category", this.state.items);
+    // console.log("category", this.props);
     const { items } = this.state;
     return (
       <section id="content" className="mt-50px">

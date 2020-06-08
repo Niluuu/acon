@@ -55,7 +55,7 @@ function Description() {
           </div>
         </div>
       </div>
-      <div className="categorys border_top border_bottom flex_just_bet">
+      <div className="categorys border_top border_bottom ">
         <CategorySlider />
       </div>
       <div className="categorys faq_row flex_just_bet">

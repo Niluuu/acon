@@ -3,61 +3,45 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
 function TabsRow() {
-  const [key, setKey] = useState("Beschereibung");
+  const [key, setKey] = useState("Описание");
   return (
-    <div className="single-tabs mb-50px">
+    <div className="single-tabs border-bottom ">
       <Tabs
         id="controlled-tab-example"
         activeKey={key}
-        style={{ display: "flex", flexDirection: "column" }}
+        style={{ display: "flex" }}
         onSelect={(k) => setKey(k)}
       >
-        <Tab eventKey="Beschereibung" title="Beschereibung">
+        <Tab eventKey="Описание" title="Описание">
           <div>
-            <p>Material &amp; Pflegehinweise</p>
+            <p className="title">Материал и инструкции по уходу</p>
+            <p className="light">Материал</p>
+            <p>80% хлопок, 20% полиэстер</p>
+            <br />
+            <p className="light">Уход</p>
             <p>
-              <strong>Material Oberstoff:</strong> 80% Baumwolle, 20% Polyester
+              Машинная стирка при 40 ° C, не сушить в стиральной машине,
+              деликатный цикл. Подробнее о товаре Шнурок на поясе, мягкая
+              отделка внутри, продукт Шнурок на поясе, мягкая отделка внутри
             </p>
-            <p>
-              <strong>Materialkonstruktion:</strong> Sweat
-            </p>
-            <p>
-              <strong>Pflegehinweise:</strong> Maschinenwäsche bei 40°C, nicht
-              Trockner geeignet, Schonwaschgang
-            </p>
-            <p>
-              Mehr zu diesem Produkt Tunnelzug im Bund, Softfinish innen,
-              Produkt Tunnelzug im Bund, Softfinish innen
-            </p>
-            <p>
-              <strong>Leibhhe:</strong> Hoch
-            </p>
-            <p>
-              <strong>Hosentaschen:</strong> Print
-            </p>
-            <p>
-              <strong>Muster:</strong> Seitentaschen
-            </p>
-            <p>
-              <strong>Details:</strong> Elastischer Bund
-            </p>
-            <p>
-              <strong>Artikelnummer:</strong> JL021A00S-I11
-            </p>
-            <div className="single-bottom-btns">
-              <a href="#" className="black-link">
-                Jaded London
-              </a>
-              <a href="#" className="btn btn-orange b-50">
-                Folgen
-              </a>
-            </div>
+            <br />
+            <p className="light">ПОсадка</p>
+            <p>Высокая</p>
+            <br /> <p className="light">Корманы</p>
+            <p>Принт</p>
+            <br /> <p className="light">Выкройка</p>
+            <p>Боковые карманы</p>
+            <br />
+            <p className="light">Детали</p>
+            <p>Высокая</p>
+            <br /> <p className="light">Артикул</p>
+            <p>Принт</p>
           </div>
         </Tab>
-        <Tab eventKey="Passform" title="Passform">
+        <Tab eventKey="Размеры" title="Размеры">
           <div>...</div>
         </Tab>
-        <Tab eventKey="Versand" title="Versand">
+        <Tab eventKey="Доставка" title="Доставка">
           <div>...</div>
         </Tab>
       </Tabs>

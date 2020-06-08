@@ -2016,17 +2016,7 @@ strong {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.single-tabs {
-  background: #fff;
-  padding: 35px 60px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 5px 18px 10px rgba(0, 0, 0, 0.04);
-  box-shadow: 0 5px 18px 10px rgba(0, 0, 0, 0.04);
-}
-.single-tabs .nav-tabs {
-  border-color: #d6d6d6;
-  margin-bottom: 30px;
-}
+
 .single-tabs .nav-item {
   margin-bottom: 0;
 }
@@ -2037,14 +2027,17 @@ strong {
   font-family: HelveticaCyr, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #6a6a6a;
+  color: #000;
   text-transform: uppercase;
   margin-right: 20px;
   border-bottom: 2px solid transparent;
+  opacity: 0.5;
 }
 .single-tabs .nav-link.active {
   font-weight: 700;
-  border-color: #fe6902;
+  border-color: #222222;
+  color: #222222 !important;
+  opacity: 1;
 }
 .small-block {
   margin-right: 10px;

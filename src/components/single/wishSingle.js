@@ -29,7 +29,10 @@ function WishProduct({ product }) {
                     </div>
                   </div>
                   <div className="col-sm-5">
-                    <div className="cc-price" style={{ textAlign: "initial" }}>
+                    <div
+                      className="cc-price bold"
+                      style={{ textAlign: "initial" }}
+                    >
                       204,95 €
                     </div>
                   </div>
