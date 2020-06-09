@@ -297,3 +297,22 @@
   opacity: 0.5;
   border: none;
 }
+
+.flex_jus_end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.categories-menu .light_collapse .my_accordion_btn_cont {
+  text-transform: capitalize !important;
+  font-weight: normal !important;
+}
+
+.single-tabs .nav-tabs {
+  justify-content: space-between;
+}
+
+.single-tabs .nav-link {
+  padding: 5px 17px;
+  margin-right: 0px;
+}

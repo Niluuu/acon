@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import IndexPage from "../src/page/indexPage";
 import Header from "../src/components/common/header";
 import Footer from "./components/common/footer";
@@ -16,7 +16,7 @@ function App() {
     <div>
       <Sidebar />
       <Header />
-      <Router>
+      <BrowserRouter>
         <div>
           <Switch>
             <Route path="/" exact>
@@ -25,7 +25,7 @@ function App() {
             <Route path="/category">
               <CategoryPage />
             </Route>
-            <Route path="/single">
+            <Route path="/single/:id">
               <SinglePage />
             </Route>
             <Route path="/cart">
@@ -40,9 +40,12 @@ function App() {
             <Route path="/whyWe">
               <WhyWePage />
             </Route>
+            <Route>
+              <IndexPage />
+            </Route>
           </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
       <Footer />
     </div>
   );

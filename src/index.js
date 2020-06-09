@@ -14,14 +14,17 @@ import "../src/assets/css/single.css";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+
 import { combineReducers } from "redux";
 import menu from "./redux/menu/reducer";
 import category from "./redux/categoryPage/reducer";
-import { composeWithDevTools } from "redux-devtools-extension";
+import single from "./redux/singlePage/reducer";
 
 const rootReducer = combineReducers({
   menuReducer: menu,
   categoryReducer: category,
+  singleReducer: single,
 });
 
 const store = createStore(
@@ -30,7 +33,7 @@ const store = createStore(
   composeWithDevTools()
 );
 
-console.log(store.getState());
+// console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>

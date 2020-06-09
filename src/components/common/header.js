@@ -23,7 +23,7 @@ function Header() {
                 <img src={img} alt="" />
               </a>
             </div>
-            <div className="col">
+            <div className="col flex_jus_end">
               <a href="#" className="heart-icon">
                 <img src={img2} alt="" />
               </a>

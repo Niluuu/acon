@@ -2,7 +2,7 @@ import React from "react";
 import CategorySlider from "../single/categorySlider";
 import Tabs from "./tabs";
 
-function Description() {
+function Description({product}) {
   return (
     <div className="col-sm-6">
       <div className="single-main-block">
@@ -63,7 +63,7 @@ function Description() {
         <button className="connect_us">Написать нам</button>
       </div>
       <div className="categorys border_top flex_just_bet">
-        <Tabs />
+        <Tabs product={product} />
       </div>
     </div>
   );

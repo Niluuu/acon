@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
-function TabsRow() {
+function TabsRow({ product }) {
   const [key, setKey] = useState("Описание");
   return (
     <div className="single-tabs border-bottom ">
@@ -19,11 +19,7 @@ function TabsRow() {
             <p>80% хлопок, 20% полиэстер</p>
             <br />
             <p className="light">Уход</p>
-            <p>
-              Машинная стирка при 40 ° C, не сушить в стиральной машине,
-              деликатный цикл. Подробнее о товаре Шнурок на поясе, мягкая
-              отделка внутри, продукт Шнурок на поясе, мягкая отделка внутри
-            </p>
+            <p>{product.description}</p>
             <br />
             <p className="light">ПОсадка</p>
             <p>Высокая</p>
