@@ -2,31 +2,17 @@ import React, { Component } from "react";
 import Table from "../components/cart/table";
 import Days from "../components/cart/days";
 import OrderInfo from "../components/cart/orderInfo";
-import CategoryList from "../components/category/categoryList";
 import CartCategory from "../components/cart/cartCategory";
-import axios from "axios";
 import { connect } from "react-redux";
 import { fetchGetCart } from "../redux/cartPage/getCart/action";
 
 class CartPage extends Component {
   componentDidMount() {
-    // const params = {
-    //   product: 2,
-    //   quantity: 2,
-    // };
-    // axios.post("https://dev.mod.uz/mdapi/v1/carts ", params, {
-    //   headers: {
-    //     "cart-uid": "1",
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    // });
     this.props.dispatch(fetchGetCart());
   }
 
   render() {
-    console.log("cart", this.props.data);
-
+    // console.log("cart", this.props.data);
     return (
       <section id="content">
         <div className="cart-container">

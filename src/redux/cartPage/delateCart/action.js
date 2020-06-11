@@ -1,5 +1,3 @@
-import { fetchGetCart } from "../getCart/action";
-
 export function fetchRemoveCart(id) {
   return (dispatch) => {
     dispatch(fetchRemoveCartBegin());
@@ -13,7 +11,10 @@ export function fetchRemoveCart(id) {
     })
       .then(handleErrors)
       .then((res) => res.json())
-      .then((json) => dispatch(fetchGetCart()))
+      .then((json) => {
+        dispatch(fetchRemoveCartSuccess(json));
+        return json;
+      })
       .catch((error) => dispatch(fetchRemoveCartFailure(error)));
   };
 }
