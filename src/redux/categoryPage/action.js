@@ -1,7 +1,7 @@
-export function fetchFunc() {
+export function fetchFunc(id) {
   return (dispatch) => {
     dispatch(fetchBegin());
-    return fetch("https://mod.uz/mdapi/v1/categories/18")
+    return fetch(`https://dev.mod.uz/mdapi/v1/categories/${id}/products`)
       .then(handleErrors)
       .then((res) => res.json())
       .then((json) => {
@@ -19,7 +19,7 @@ function handleErrors(response) {
   return response;
 }
 
-export const FETCH_BEGIN = " FETCH_BEGIN";
+export const FETCH_BEGIN = "FETCH_BEGIN";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
 

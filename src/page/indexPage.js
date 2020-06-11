@@ -1,14 +1,15 @@
 import React from "react";
 import Content from "../components/index/content";
 import { connect } from "react-redux";
-import { fetchProducts } from "../components/index/redux/action";
+import { fetchHome } from "../redux/index/action";
 
 class indexPage extends React.Component {
-  // componentDidMount() {
-  //   this.props.dispatch(fetchProducts());
-  // }
+  componentDidMount() {
+    this.props.dispatch(fetchHome());
+  }
+
   render() {
-    // console.log(this.props.products);
+    console.log("home", this.props);
     return (
       <React.Fragment>
         <Content />
@@ -17,10 +18,8 @@ class indexPage extends React.Component {
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   products: state.products,
-//   loading: state.products.loading,
-//   error: state.products.error,
-// });
+const mapStateToProps = (state) => {
+  return state.homeReducer;
+};
 
-export default indexPage;
+export default connect(mapStateToProps)(indexPage);

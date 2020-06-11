@@ -7,7 +7,7 @@ import { fetchFunc } from "../redux/categoryPage/action";
 
 class CategoryPage extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchFunc());
+    this.props.dispatch(fetchFunc(89));
   }
 
   render() {

@@ -20,11 +20,15 @@ import { combineReducers } from "redux";
 import menu from "./redux/menu/reducer";
 import category from "./redux/categoryPage/reducer";
 import single from "./redux/singlePage/reducer";
+import home from "./redux/index/reducer";
+import cartGet from "./redux/cartPage/getCart/reducer";
 
 const rootReducer = combineReducers({
   menuReducer: menu,
   categoryReducer: category,
   singleReducer: single,
+  homeReducer: home,
+  cartGetReducer: cartGet,
 });
 
 const store = createStore(

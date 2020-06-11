@@ -1,39 +1,37 @@
 import {
-  FETCH_PRODUCTS_BEGIN,
-  FETCH_PRODUCTS_SUCCESS,
-  FETCH_PRODUCTS_FAILURE,
+  FETCH_HOME_BEGIN,
+  FETCH_HOME_SUCCESS,
+  FETCH_HOME_FAILURE,
 } from "./action";
 
 const initialState = {
-  items: [],
+  data: [],
   loading: false,
   error: null,
 };
 
-export default function singleReducer(state = initialState, action) {
+export default function home(state = initialState, action) {
   switch (action.type) {
-    case FETCH_PRODUCTS_BEGIN:
+    case FETCH_HOME_BEGIN:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case FETCH_PRODUCTS_SUCCESS:
+    case FETCH_HOME_SUCCESS:
       return {
         ...state,
         loading: false,
-        items: action.payload.data,
+        data: action.payload.products,
       };
-
-    case FETCH_PRODUCTS_FAILURE:
+    case FETCH_HOME_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload.error,
-        items: [],
+        data: [],
       };
-
     default:
       return state;
   }

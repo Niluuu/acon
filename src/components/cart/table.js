@@ -5,7 +5,7 @@ function Table() {
   return (
     <table className="table cart-table">
       <tbody>
-        <TableCart product={2} />
+        <TableCart />
       </tbody>
     </table>
   );

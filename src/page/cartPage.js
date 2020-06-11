@@ -4,27 +4,29 @@ import Days from "../components/cart/days";
 import OrderInfo from "../components/cart/orderInfo";
 import CategoryList from "../components/category/categoryList";
 import CartCategory from "../components/cart/cartCategory";
-import { render } from "@testing-library/react";
 import axios from "axios";
+import { connect } from "react-redux";
+import { fetchGetCart } from "../redux/cartPage/getCart/action";
 
 class CartPage extends Component {
-  state = {
-    items: {},
-  };
-
   componentDidMount() {
-    // this.props.dispatch(fetchFunc());
-    axios
-      .get("https://mod.uz/mdapi/v1/carts", {
-        headers: {
-          "cart-uid": "1",
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      })
-      .then((data) => this.setState({ items: data.data }));
+    // const params = {
+    //   product: 2,
+    //   quantity: 2,
+    // };
+    // axios.post("https://dev.mod.uz/mdapi/v1/carts ", params, {
+    //   headers: {
+    //     "cart-uid": "1",
+    //     Accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+    this.props.dispatch(fetchGetCart());
   }
+
   render() {
+    console.log("cart", this.props.data);
+
     return (
       <section id="content">
         <div className="cart-container">
@@ -32,8 +34,15 @@ class CartPage extends Component {
             <div className="row mb-30px">
               <div className="col-sm-8">
                 <div className="shadow-container">
-                  <h3 className="mb-20px">Warenkorb (3 Artikel)</h3>
-                  <Table />
+                  {this.props.data.cart && this.props.data.cart.cart_products && (
+                    <React.Fragment>
+                      <h3 className="mb-20px">
+                        Warenkorb ({this.props.data.cart.cart_products.length}
+                        Artikel)
+                      </h3>
+                      <Table />
+                    </React.Fragment>
+                  )}
                   <div className="cart-question">
                     <a href="#">
                       <i
@@ -56,4 +65,8 @@ class CartPage extends Component {
   }
 }
 
-export default CartPage;
+const mapStateToProps = (state) => {
+  return state.cartGetReducer;
+};
+
+export default connect(mapStateToProps)(CartPage);
