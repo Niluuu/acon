@@ -6,17 +6,15 @@ import { fetchGetCart } from "../../redux/cartPage/getCart/action";
 
 class TableCart extends Component {
   handleClick = (id) => {
-    // alert(id);
     this.props.dispatch(fetchRemoveCart(id));
     this.props.dispatch(fetchGetCart());
   };
 
   render() {
-    // console.log("cart TABLE", this.props.data.cart);
     return (
       <React.Fragment>
         {this.props.data.cart &&
-          this.props.data.cart.cart_products.map((item) => {
+          this.props.data.cart.products.map((item) => {
             return (
               <tr>
                 <td>
@@ -29,15 +27,12 @@ class TableCart extends Component {
                 <td>
                   <div className="csb-info">
                     <div className="csb-link">A.Kjrbede</div>
-                    <div className="csb-subtitle">
-                      {item.product && item.product.name}
-                    </div>
+                    <div className="csb-subtitle">{item.name}</div>
                     <div className="csb-info-list">
                       <div className="csb-text">Farbe: gold</div>
                       <div className="csb-text">Grobe: One Size </div>
                     </div>
                     <div className="csb-bottom">
-                      {item.id}
                       <a
                         href="#"
                         className="delete"
@@ -62,9 +57,7 @@ class TableCart extends Component {
                       <option value="">1</option>
                       <option value="">1</option>
                     </select>
-                    <div className="csb-price">
-                      {item.product && item.product.price}$
-                    </div>
+                    <div className="csb-price">{item.price}$</div>
                   </div>
                 </td>
               </tr>

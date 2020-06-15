@@ -316,3 +316,8 @@
   padding: 5px 17px;
   margin-right: 0px;
 }
+
+.cart-container .cpc-price {
+  position: relative;
+  top: -18px;
+}

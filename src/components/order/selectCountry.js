@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import api from "./country.json";
 
 function SelectCountry() {
-  console.log("country", api.country);
   return (
     <div className="row">
       <div className="col-sm-8">

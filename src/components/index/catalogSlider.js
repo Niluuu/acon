@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import WishProduct from "../common/wishProduct";
+import { connect } from "react-redux";
 
-export default class CatalogSlider extends Component {
+class CatalogSlider extends Component {
   render() {
     const settings = {
       dots: true,
@@ -14,20 +15,22 @@ export default class CatalogSlider extends Component {
     return (
       <div className="catalog_slider">
         <Slider {...settings}>
-          <div>
-            <WishProduct product={1} />
-          </div>
-          <div>
-            <WishProduct product={1} />
-          </div>
-          <div>
-            <WishProduct product={1} />
-          </div>
-          <div>
-            <WishProduct product={1} />
-          </div>
+          {this.props.data[0] &&
+            this.props.data[0].items.map((p) => {
+              return (
+                <div key={Math.random()}>
+                  <WishProduct product={p} />
+                </div>
+              );
+            })}
         </Slider>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return state.homeReducer;
+};
+
+export default connect(mapStateToProps)(CatalogSlider);

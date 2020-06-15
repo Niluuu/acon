@@ -30,7 +30,7 @@ class SinglePage extends React.Component {
               <img src={img} alt="" /> добавить В корзину
             </button>
             <Description product={data} />
-            <ProductSlider />
+            <ProductSlider products={data.variations} />
           </div>
         )}
       </section>

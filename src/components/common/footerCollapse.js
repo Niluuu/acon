@@ -21,7 +21,7 @@ function FooterCollapse() {
           {items &&
             items.map(({ title, id }) => {
               return (
-                <li>
+                <li key={Math.random()}>
                   <FooterCustomToggle key={Math.random()} eventKey={id}>
                     {title}
                   </FooterCustomToggle>

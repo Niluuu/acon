@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import img from "../../assets/images/tmp/c4.jpg";
+import { connect } from "react-redux";
 
-export default class WishedSlider extends Component {
+class WishedSlider extends Component {
   render() {
     const settings = {
       dots: true,
@@ -11,28 +12,31 @@ export default class WishedSlider extends Component {
       slidesToShow: 2,
       slidesToScroll: 2,
     };
+    const data = this.props.data[0];
     return (
       <div>
         <Slider {...settings}>
-          <div>
-            <Product />
-          </div>
-          <div>
-            <Product />
-          </div>
-          <div>
-            <Product />
-          </div>
-          <div>
-            <Product />
-          </div>
+          {data &&
+            data.items.map((p) => {
+              return (
+                <div key={Math.random()}>
+                  <Product product={p} />
+                </div>
+              );
+            })}
         </Slider>
       </div>
     );
   }
 }
 
-const Product = () => {
+const mapStateToProps = (state) => {
+  return state.homeReducer;
+};
+
+export default connect(mapStateToProps)(WishedSlider);
+
+const Product = ({ product }) => {
   return (
     <div className="item" style={{ marginRight: "33px" }}>
       <div className="cc-block">
@@ -49,7 +53,7 @@ const Product = () => {
                 Zara
               </a>
               <div className="cc-category">
-                <a href="#">Сникерсы</a>
+                <a href="#">{product.title}</a>
               </div>
             </div>
             <div className="col-sm-5">

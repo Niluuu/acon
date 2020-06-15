@@ -22,12 +22,10 @@ class Sidebar extends Component {
               {items &&
                 items.map(({ name, id, children }) => {
                   return (
-                    <li>
-                      <CustomToggle key={Math.random()} eventKey={id}>
-                        {name}
-                      </CustomToggle>
+                    <li key={Math.random()}>
+                      <CustomToggle eventKey={id}>{name}</CustomToggle>
                       <Accordion.Collapse eventKey={id}>
-                        <nav class="categories-menu__submenu">
+                        <nav className="categories-menu__submenu">
                           {children &&
                             children.map(({ created_at, name }) => {
                               return (
@@ -35,7 +33,7 @@ class Sidebar extends Component {
                                   key={created_at}
                                   href="#"
                                   title={name}
-                                  class="categories-menu__link categories-menu__link_sub"
+                                  className="categories-menu__link categories-menu__link_sub"
                                 >
                                   {name}
                                 </a>

@@ -12,7 +12,6 @@ class CartPage extends Component {
   }
 
   render() {
-    // console.log("cart", this.props.data);
     return (
       <section id="content">
         <div className="cart-container">
@@ -20,10 +19,10 @@ class CartPage extends Component {
             <div className="row mb-30px">
               <div className="col-sm-8">
                 <div className="shadow-container">
-                  {this.props.data.cart && this.props.data.cart.cart_products && (
+                  {this.props.data.cart && this.props.data.cart.products && (
                     <React.Fragment>
                       <h3 className="mb-20px">
-                        Warenkorb ({this.props.data.cart.cart_products.length}
+                        Warenkorb ({this.props.data.cart.products.length}
                         Artikel)
                       </h3>
                       <Table />

@@ -15,18 +15,14 @@ export default class PoductSlider extends Component {
       <div className="product_slider">
         <h2 className="title"> Смотрите так же </h2>
         <Slider {...settings}>
-          <div>
-            <WishProduct product={1} />
-          </div>
-          <div>
-            <WishProduct product={1} />
-          </div>
-          <div>
-            <WishProduct product={1} />
-          </div>
-          <div>
-            <WishProduct product={1} />
-          </div>
+          {this.props.products &&
+            this.props.products.map((product) => {
+              return (
+                <div>
+                  <WishProduct product={product} />
+                </div>
+              );
+            })}
         </Slider>
       </div>
     );

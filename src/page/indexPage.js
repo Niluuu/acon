@@ -9,7 +9,6 @@ class indexPage extends React.Component {
   }
 
   render() {
-    console.log("home", this.props);
     return (
       <React.Fragment>
         <Content />
