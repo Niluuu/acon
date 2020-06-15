@@ -2,7 +2,6 @@ import React from "react";
 import img from "../../assets/images/tmp/c4.jpg";
 
 function WishProduct({ product }) {
-  console.log("product", product);
   return (
     <React.Fragment>
       <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
@@ -20,12 +19,12 @@ function WishProduct({ product }) {
                   Zara
                 </a>
                 <div className="cc-category">
-                  <a href="#">Сникерсы</a>
+                  <a href="#">{product.meta_title}</a>
                 </div>
               </div>
               <div className="col-sm-5">
                 <div className="cc-price bold" style={{ textAlign: "initial" }}>
-                  204,95 €
+                  {product.price} €
                 </div>
               </div>
             </div>

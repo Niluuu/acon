@@ -16,7 +16,7 @@ class SinglePage extends React.Component {
   handleClick = (productID) => {
     this.props.dispatch(addCart(productID));
   };
-  
+
   render() {
     const { data } = this.props;
 
@@ -30,7 +30,7 @@ class SinglePage extends React.Component {
               <img src={img} alt="" /> добавить В корзину
             </button>
             <Description product={data} />
-            <ProductSlider products={data.variations} />
+            <ProductSlider products={data.similarByBrand} />
           </div>
         )}
       </section>
