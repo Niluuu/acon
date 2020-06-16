@@ -1,17 +1,12 @@
 import axios from "axios";
 
-export function addCart(productID, uid) {
-  const params = {
-    product: productID,
-    quantity: 1,
-  };
-
+export function quantity(valu, product) {
   return (dispatch) => {
-    dispatch(addCartBegin());
+    dispatch(quantityBegin());
     return axios
-      .post("https://dev.mod.uz/mdapi/v1/carts ", params, {
+      .patch(`https://dev.mod.uz/mdapi/v1/carts/${product}/quantity/${valu}`, {
         headers: {
-          "cart-uid": uid,
+          "cart-uid": "1",
           Accept: "application/json",
           "Content-Type": "application/json",
         },
@@ -19,10 +14,10 @@ export function addCart(productID, uid) {
       .then(handleErrors)
       .then((res) => res.json())
       .then((json) => {
-        dispatch(addCartSuccess(json));
+        dispatch(quantitySuccess(json));
         return json;
       })
-      .catch((error) => dispatch(addCartFailure(error)));
+      .catch((error) => dispatch(quantityFailure(error)));
   };
 }
 
@@ -37,16 +32,16 @@ export const ADD_CART_BEGIN = "ADD_CART_BEGIN";
 export const ADD_CART_SUCCESS = "ADD_CART_SUCCESS";
 export const ADD_CART_FAILURE = "ADD_CART_FAILURE";
 
-export const addCartBegin = () => ({
+export const quantityBegin = () => ({
   type: ADD_CART_BEGIN,
 });
 
-export const addCartSuccess = (products) => ({
+export const quantitySuccess = (products) => ({
   type: ADD_CART_SUCCESS,
   payload: { products },
 });
 
-export const addCartFailure = (error) => ({
+export const quantityFailure = (error) => ({
   type: ADD_CART_FAILURE,
   payload: { error },
 });

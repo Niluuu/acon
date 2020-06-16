@@ -3,6 +3,7 @@ import img from "../../assets/images/MOD.png";
 import img1 from "../../assets/images/h1.png";
 import img2 from "../../assets/images/h2.png";
 import img3 from "../../assets/images/h3.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -19,17 +20,17 @@ function Header() {
               </div>
             </div>
             <div className="col">
-              <a href="#" className="mobile-logo">
+              <Link className="mobile-logo" to="/">
                 <img src={img} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="col flex_jus_end">
               <a href="#" className="heart-icon">
                 <img src={img2} alt="" />
               </a>
-              <a href="#" className="cart-mobile">
+              <Link className="cart-mobile" to="/cart">
                 <img src={img3} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

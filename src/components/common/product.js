@@ -8,8 +8,8 @@ function Product({ product }) {
       {product &&
         product.items.map((product) => {
           return (
-            <div className="col-sm-4 col-6" key={Math.random()}>
-              <Link to={`/single/${product.id}`}>
+            <Link to={`/single/${product.id}`}>
+              <div className="col-sm-4 col-6" key={Math.random()}>
                 <div className="cc-block">
                   <a href="#" className="wish-icon">
                     <i className="fa fa-heart-o" aria-hidden="true"></i>
@@ -38,8 +38,8 @@ function Product({ product }) {
                     </div>
                   </div>
                 </div>
-              </Link>
-            </div>
+              </div>
+            </Link>
           );
         })}
     </React.Fragment>

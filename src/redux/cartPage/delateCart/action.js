@@ -4,7 +4,7 @@ export function fetchRemoveCart(id) {
     return fetch(`https://dev.mod.uz/mdapi/v1/carts/${id}/remove`, {
       method: "DELETE",
       headers: {
-        "cart-uid": "1",
+        "cart-uid": window.localStorage.getItem("uid"),
         Accept: "application/json",
         "Content-Type": "application/json",
       },

@@ -14,11 +14,17 @@ class SinglePage extends React.Component {
   }
 
   handleClick = (productID) => {
-    this.props.dispatch(addCart(productID));
+    const uid = 1;
+    this.props.dispatch(addCart(productID, uid));
+    const localId = window.localStorage.getItem("uid");
+
+    if (localId === null) {
+      window.localStorage.setItem("uid", JSON.stringify(uid));
+    }
   };
 
   render() {
-    const { data } = this.props;
+    const { data } = this.props.singleReducer;
 
     return (
       <section>
@@ -39,7 +45,7 @@ class SinglePage extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return state.singleReducer;
+  return state;
 };
 
 export default connect(mapStateToProps)(SinglePage);

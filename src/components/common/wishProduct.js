@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function WishProduct({ product }) {
   return (
-    <Link to={`/single/${product.id}`}>
-      <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
+    <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
+      <Link to={`/single/${product.id}`}>
         <div className="cc-block">
           <a href="#" className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
@@ -31,8 +31,8 @@ function WishProduct({ product }) {
             </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 

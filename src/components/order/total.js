@@ -1,7 +1,6 @@
 import React from "react";
 
 function Total({ products }) {
-  // console.log("products", products);
   return (
     <div className="shadow-container">
       <div className="row mb-15px">
@@ -9,7 +8,7 @@ function Total({ products }) {
           <div className="zb-p">Итого</div>
         </div>
         <div className="col-sm-6 col-6">
-          <div className="zb-p">65463</div>
+          <div className="zb-p">{products.products_price}</div>
         </div>
       </div>
       <div className="row">
@@ -20,7 +19,7 @@ function Total({ products }) {
         </div>
         <div className="col-sm-6 col-6">
           <div className="zb-p">
-            <span>4 970,00 руб.</span>
+            <span>{products.total_price}</span>
           </div>
         </div>
       </div>

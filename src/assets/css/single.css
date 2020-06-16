@@ -303,9 +303,12 @@
   justify-content: flex-end;
 }
 
-.categories-menu .light_collapse .my_accordion_btn_cont {
+.categories-menu li span {
   text-transform: capitalize !important;
-  font-weight: normal !important;
+  font-weight: bold !important;
+  font-size: 16px;
+  line-height: 40px;
+  color: #000 !important;
 }
 
 .single-tabs .nav-tabs {

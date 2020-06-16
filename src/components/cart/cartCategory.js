@@ -12,7 +12,7 @@ class CartCategory extends Component {
           {recommended &&
             recommended.map((item) => {
               return (
-                <div className="col-sm-3">
+                <div className="col-sm-3" key={Math.random()}>
                   <SingleProduct product={item} />
                 </div>
               );

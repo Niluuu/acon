@@ -14,9 +14,9 @@ import Sidebar from "./components/common/sidebar";
 function App() {
   return (
     <div>
-      <Sidebar />
-      <Header />
       <BrowserRouter>
+        <Sidebar />
+        <Header />
         <div>
           <Switch>
             <Route path="/" exact>

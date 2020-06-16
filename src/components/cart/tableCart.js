@@ -2,12 +2,22 @@ import React, { Component } from "react";
 import img from "../../assets/images/tmp/c1.jpg";
 import { connect } from "react-redux";
 import { fetchRemoveCart } from "../../redux/cartPage/delateCart/action";
-import { fetchGetCart } from "../../redux/cartPage/getCart/action";
+import { quantity } from "../../redux/cartPage/quantity/action";
 
 class TableCart extends Component {
+  state = {
+    val: 1,
+  };
+
   handleClick = (id) => {
     this.props.dispatch(fetchRemoveCart(id));
-    this.props.dispatch(fetchGetCart());
+    window.localStorage.removeItem("uid");
+  };
+
+  handleChange = (e, id) => {
+    // console.log(e.target.value, id);
+    this.setState({ val: e.target.value });
+    this.props.dispatch(quantity(e.target.value, id));
   };
 
   render() {
@@ -16,7 +26,7 @@ class TableCart extends Component {
         {this.props.data.cart &&
           this.props.data.cart.products.map((item) => {
             return (
-              <tr>
+              <tr key={Math.random()}>
                 <td>
                   <div className="cart-single-block">
                     <div className="csb-image">
@@ -36,7 +46,7 @@ class TableCart extends Component {
                       <a
                         href="#"
                         className="delete"
-                        onClick={() => this.handleClick(item.id)}
+                        onClick={() => this.handleClick(item.cart_product_id)}
                       >
                         <i className="fa fa-trash-o" aria-hidden="true"></i>{" "}
                         Удалить
@@ -50,12 +60,18 @@ class TableCart extends Component {
                 </td>
                 <td>
                   <div className="cart-counts">
-                    <select name="" id="" className="sel">
-                      <option value="">1</option>
-                      <option value="">1</option>
-                      <option value="">1</option>
-                      <option value="">1</option>
-                      <option value="">1</option>
+                    <select
+                      name={item.id}
+                      id=""
+                      className="sel"
+                      value={this.state.val}
+                      onChange={(e) =>
+                        this.handleChange(e, item.cart_product_id)
+                      }
+                    >
+                      {Array.from(Array(10), (_, i) => i + 1).map((n) => {
+                        return <option value={n}>{n}</option>;
+                      })}
                     </select>
                     <div className="csb-price">{item.price}$</div>
                   </div>

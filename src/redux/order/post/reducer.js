@@ -1,36 +1,36 @@
 import {
-  FETCH_PRODUCTS_BEGIN,
-  FETCH_PRODUCTS_SUCCESS,
-  FETCH_PRODUCTS_FAILURE,
+  ORDER_POST_BEGIN,
+  ORDER_POST_SUCCESS,
+  ORDER_POST_FAILURE,
 } from "./action";
 
 const initialState = {
-  items: [],
+  order: [],
   loading: false,
   error: null,
 };
 
-export default function productReducer(state = initialState, action) {
+export default function order(state = initialState, action) {
   switch (action.type) {
-    case FETCH_PRODUCTS_BEGIN:
+    case ORDER_POST_BEGIN:
       return {
         ...state,
         loading: true,
         error: null,
       };
 
-    case FETCH_PRODUCTS_SUCCESS:
+    case ORDER_POST_SUCCESS:
       return {
         ...state,
         loading: false,
-        items: action.payload.products,
+        order: action.payload.products,
       };
-    case FETCH_PRODUCTS_FAILURE:
+    case ORDER_POST_FAILURE:
       return {
         ...state,
         loading: false,
         error: action.payload.error,
-        items: [],
+        order: [],
       };
     default:
       return state;

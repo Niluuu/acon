@@ -6,13 +6,43 @@ import Total from "../components/order/total";
 import PaySlider from "../components/order/paySlider";
 import { connect } from "react-redux";
 import { fetchGetCart } from "../redux/cartPage/getCart/action";
+import { orderGet } from "../redux/order/get/action";
+import { orderPost } from "../redux/order/post/action";
 
 class OrderPage extends Component {
+  state = {
+    cart_uid: window.localStorage.getItem("uid"),
+    region: 1,
+    email: "",
+    first_name: "",
+    last_name: "",
+    phone: "",
+    city: "",
+    street: "",
+    provider: "click",
+  };
+
   componentDidMount() {
     this.props.dispatch(fetchGetCart());
+    this.props.dispatch(orderGet());
   }
 
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleClick = () => {
+    this.props.dispatch(orderPost({ ...this.state }));
+  };
+
+  selectChange = (e) => {
+    this.setState({ region: e.target.value });
+  };
+
   render() {
+    const { data } = this.props.cartGetReducer;
+    const { order } = this.props.orderReducer;
+    console.log(this.props);
     return (
       <section id="content">
         <div className="text-center">
@@ -23,31 +53,52 @@ class OrderPage extends Component {
             <div className="row mb-30px">
               <div className="col-sm-8">
                 <div className="shadow-container">
-                  <h4 className="mb-20px">Страна доставки</h4>
-                  <SelectCountry />
+                  <h4 className="mb-20px">Районы доставки</h4>
+
+                  {order && order.regions && (
+                    <SelectCountry
+                      regions={order.regions}
+                      selectChange={this.selectChange}
+                    />
+                  )}
                 </div>
                 <div className="shadow-container">
                   <h4 className="mb-20px">Адрес электронной почты</h4>
-                  <div className="zakaz-email">company1234@gmail.com</div>
+                  <div className="zakaz-email">
+                    <div className="form-group">
+                      <input
+                        name="email"
+                        value={this.state.email}
+                        type="text"
+                        className="form-control"
+                        onChange={(e) => this.handleChange(e)}
+                      />
+                    </div>
+                  </div>
                 </div>
-                <OrderForm />
-                {this.props.data.cart && this.props.data.cart.products && (
+
+                <OrderForm {...this.state} handleChange={this.handleChange} />
+
+                {data.cart && data.cart.products && (
                   <React.Fragment>
-                    <OrderedProducts
-                      products={this.props.data.cart.products}
-                    />
-                    <Total 
-                      products={this.props.data.cart.products} 
-                    />
+                    <OrderedProducts products={data.cart.products} />
+                    <Total products={data.cart} />
                   </React.Fragment>
                 )}
-                <PaySlider />
+
+                {order && order.payment && (
+                  <PaySlider payment={order.payment} />
+                )}
+
                 <div className="zakaz-buttons d-md-none d-block">
                   <div className="row align-items-center">
                     <div className="col-sm-4">
-                      <a href="#" className="btn btn-default bordered mb-20px">
+                      <button
+                        onClick={() => this.handleClick()}
+                        className="btn btn-default bordered mb-20px"
+                      >
                         Заказать
-                      </a>
+                      </button>
                     </div>
                     <div className="col-sm-8">
                       <p>
@@ -67,7 +118,7 @@ class OrderPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return state.cartGetReducer;
+  return state;
 };
 
 export default connect(mapStateToProps)(OrderPage);

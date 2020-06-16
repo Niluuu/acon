@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import img from "../../assets/images/tmp/c4.jpg";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class WishedSlider extends Component {
   render() {
@@ -20,7 +21,9 @@ class WishedSlider extends Component {
             data.items.map((p) => {
               return (
                 <div key={Math.random()}>
-                  <Product product={p} />
+                  <Link to={`/single/${p.id}`}>
+                    <Product product={p} />
+                  </Link>
                 </div>
               );
             })}
