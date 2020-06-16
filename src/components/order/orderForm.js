@@ -7,7 +7,7 @@ class OrderForm extends Component {
         <h4 className="mb-20px">Адрес доставки</h4>
         <div className="zakaz-form">
           <div className="form-group">
-            <label for="">Имя</label>
+            <label>Имя</label>
             <input
               name="first_name"
               value={this.props.first_name}
@@ -17,7 +17,7 @@ class OrderForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="">Фамилия</label>
+            <label>Фамилия</label>
             <input
               name="last_name"
               value={this.props.last_name}
@@ -27,7 +27,7 @@ class OrderForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="">Мобильный телефон</label>
+            <label>Мобильный телефон</label>
             <input
               name="phone"
               value={this.props.phone}
@@ -37,7 +37,7 @@ class OrderForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="">Адрес</label>
+            <label>Адрес</label>
             <input
               name="street"
               value={this.props.street}
@@ -47,7 +47,7 @@ class OrderForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label for="">Город</label>
+            <label>Город</label>
             <input
               name="city"
               value={this.props.city}

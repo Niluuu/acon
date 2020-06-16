@@ -11,20 +11,18 @@ function Product({ product }) {
             <Link to={`/single/${product.id}`}>
               <div className="col-sm-4 col-6" key={Math.random()}>
                 <div className="cc-block">
-                  <a href="#" className="wish-icon">
+                  <span className="wish-icon">
                     <i className="fa fa-heart-o" aria-hidden="true"></i>
-                  </a>
-                  <a href="#" className="cc-image">
+                  </span>
+                  <span className="cc-image">
                     <img src={img} alt="" />
-                  </a>
+                  </span>
                   <div className="cc-content">
                     <div className="row">
                       <div className="col-sm-7">
-                        <a href="#" className="cc-title">
-                          Zara
-                        </a>
+                        <span className="cc-title">Zara</span>
                         <div className="cc-category">
-                          <a href="#">{product.title}</a>
+                          <span>{product.title}</span>
                         </div>
                       </div>
                       <div className="col-sm-5">
@@ -32,7 +30,7 @@ function Product({ product }) {
                           className="cc-price"
                           style={{ textAlign: "initial" }}
                         >
-                          204,95 €
+                          {product.price}
                         </div>
                       </div>
                     </div>

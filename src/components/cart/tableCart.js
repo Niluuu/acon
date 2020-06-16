@@ -70,7 +70,11 @@ class TableCart extends Component {
                       }
                     >
                       {Array.from(Array(10), (_, i) => i + 1).map((n) => {
-                        return <option value={n}>{n}</option>;
+                        return (
+                          <option key={Math.random()} value={n}>
+                            {n}
+                          </option>
+                        );
                       })}
                     </select>
                     <div className="csb-price">{item.price}$</div>

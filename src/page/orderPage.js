@@ -33,6 +33,7 @@ class OrderPage extends Component {
 
   handleClick = () => {
     this.props.dispatch(orderPost({ ...this.state }));
+    this.props.dispatch(fetchGetCart());
   };
 
   selectChange = (e) => {
@@ -42,7 +43,6 @@ class OrderPage extends Component {
   render() {
     const { data } = this.props.cartGetReducer;
     const { order } = this.props.orderReducer;
-    console.log(this.props);
     return (
       <section id="content">
         <div className="text-center">

@@ -7,20 +7,18 @@ function SingleProduct({ product }) {
     <div key={Math.random()} className="item">
       <Link to={`/single/${product.id}`}>
         <div className="cc-block">
-          <a href="#" className="wish-icon">
+          <span className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
-          </a>
-          <a href="#" className="cc-image">
+          </span>
+          <span className="cc-image">
             <img src={img} alt="" />
-          </a>
+          </span>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
-                <a href="#" className="cc-title">
-                  {product.brand}
-                </a>
+                <span className="cc-title">{product.brand}</span>
                 <div className="cc-category">
-                  <a href="#">{product.name}</a>
+                  <span>{product.name}</span>
                 </div>
               </div>
               <div className="col-sm-5">

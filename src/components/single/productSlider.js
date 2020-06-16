@@ -18,7 +18,7 @@ export default class PoductSlider extends Component {
           {this.props.products &&
             this.props.products.map((product) => {
               return (
-                <div>
+                <div key={Math.random()}>
                   <WishProduct product={product} />
                 </div>
               );

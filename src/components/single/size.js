@@ -21,7 +21,7 @@ export default class Size extends Component {
         <Slider {...settings}>
           {sizes.map((s) => {
             return (
-              <div className="sizes">
+              <div className="sizes" key={Math.random()}>
                 <input type="radio" value={1} />
                 <div
                   className={

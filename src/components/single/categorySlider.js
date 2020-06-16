@@ -22,7 +22,7 @@ export default class CategorySlider extends Component {
         <Slider {...settings}>
           {data.map((s) => {
             return (
-              <div className="categorys_slider">
+              <div key={Math.random()} className="categorys_slider">
                 <input type="radio" value={1} />
                 <div
                   className={

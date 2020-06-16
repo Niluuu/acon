@@ -7,25 +7,23 @@ function WishProduct({ product }) {
     <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
       <Link to={`/single/${product.id}`}>
         <div className="cc-block">
-          <a href="#" className="wish-icon">
+          <span className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
-          </a>
-          <a href="#" className="cc-image">
+          </span>
+          <span className="cc-image">
             <img src={img} alt="" />
-          </a>
+          </span>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
-                <a href="#" className="cc-title">
-                  {product.title}
-                </a>
+                <span className="cc-title">{product.title}</span>
                 <div className="cc-category">
-                  <a href="#">Сникерсы</a>
+                  <span>Сникерсы</span>
                 </div>
               </div>
               <div className="col-sm-5">
                 <div className="cc-price" style={{ textAlign: "initial" }}>
-                  204,95 €
+                  {product.price}€
                 </div>
               </div>
             </div>
