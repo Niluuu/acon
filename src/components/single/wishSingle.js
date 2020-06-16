@@ -1,10 +1,11 @@
 import React from "react";
 import img from "../../assets/images/tmp/c4.jpg";
+import { Link } from "react-router-dom";
 
 function WishProduct({ product }) {
   return (
-    <React.Fragment>
-      <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
+    <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
+      <Link to={`/single/${product.id}`}>
         <div className="cc-block">
           <a href="#" className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
@@ -30,8 +31,8 @@ function WishProduct({ product }) {
             </div>
           </div>
         </div>
-      </div>
-    </React.Fragment>
+      </Link>
+    </div>
   );
 }
 

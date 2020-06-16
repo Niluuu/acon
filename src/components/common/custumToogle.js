@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import AccordionContext from "react-bootstrap/AccordionContext";
-import down from "../../assets/images/down.png";
 
 function CustomToggle({ children, eventKey }) {
   const currentEventKey = useContext(AccordionContext);
@@ -18,15 +17,22 @@ function CustomToggle({ children, eventKey }) {
       }
     >
       {children}
-      <img
-        src={down}
-        alt=""
-        className={
-          isCurrentEventKey && accordionIsExpanded
-            ? "down_icon_btn"
-            : "down_icon_btn icon_rotated"
-        }
-      />
+      <span class="icon-arrow">
+        <span
+          className={
+            isCurrentEventKey && accordionIsExpanded
+              ? "arrow_left "
+              : "arrow_left rotated_left"
+          }
+        ></span>
+        <span
+          className={
+            isCurrentEventKey && accordionIsExpanded
+              ? "arrow_right "
+              : "arrow_right rotated_right"
+          }
+        ></span>
+      </span>
     </div>
   );
 }
