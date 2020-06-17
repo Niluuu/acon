@@ -23,7 +23,8 @@ export default function order(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        order: action.payload.products,
+        order: action.payload,
+        error: null,
       };
     case ORDER_POST_FAILURE:
       return {

@@ -328,3 +328,8 @@
 .cc-category {
   color: #000 !important;
 }
+
+.error {
+  color: red !important;
+  text-align: center;
+}

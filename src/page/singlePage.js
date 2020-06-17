@@ -9,8 +9,8 @@ import { fetchSingle } from "../redux/singlePage/action";
 import { addCart } from "../redux/cartPage/addCart/action";
 
 class SinglePage extends React.Component {
-  componentWillMount() {
-    this.props.dispatch(fetchSingle(2));
+  componentDidMount() {
+    this.props.dispatch(fetchSingle(this.props.match.params.id));
   }
 
   handleClick = (productID) => {
@@ -25,14 +25,16 @@ class SinglePage extends React.Component {
 
   render() {
     const { data } = this.props.singleReducer;
-
     return (
       <section>
-        {this.props && data && (
+        {this.props && data && data.product && (
           <div className="top-single-container mb-45px">
-            <SimpleSlider />
+            <SimpleSlider product={data} />
             <Info product={data} />
-            <button className="add_to_cart" onClick={() => this.handleClick(2)}>
+            <button
+              className="add_to_cart"
+              onClick={() => this.handleClick(data.product.id)}
+            >
               <img src={img} alt="" /> добавить В корзину
             </button>
             <Description product={data} />

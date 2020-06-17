@@ -10,9 +10,9 @@ function WishProduct({ product }) {
           <span className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
           </span>
-          <span className="cc-image">
+          <a className="cc-image">
             <img src={img} alt="" />
-          </span>
+          </a>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">

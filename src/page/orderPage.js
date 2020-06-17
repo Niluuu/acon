@@ -40,9 +40,14 @@ class OrderPage extends Component {
     this.setState({ region: e.target.value });
   };
 
+  handlePaymet = (e) => {
+    console.log(e);
+  };
+
   render() {
     const { data } = this.props.cartGetReducer;
     const { order } = this.props.orderReducer;
+    // console.log("oder", this.props.orderPostReducer);
     return (
       <section id="content">
         <div className="text-center">
@@ -93,6 +98,11 @@ class OrderPage extends Component {
                 <div className="zakaz-buttons d-md-none d-block">
                   <div className="row align-items-center">
                     <div className="col-sm-4">
+                      {/* {this.props.orderPostReducer.error && (
+                        <p className="error align-items-center">
+                          Something went wrong
+                        </p>
+                      )} */}
                       <button
                         onClick={() => this.handleClick()}
                         className="btn btn-default bordered mb-20px"

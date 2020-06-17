@@ -25,9 +25,10 @@ function App() {
             <Route path="/category">
               <CategoryPage />
             </Route>
-            <Route path="/single/:id">
-              <SinglePage />
-            </Route>
+            <Route
+              path="/single/:id"
+              render={(props) => <SinglePage {...props} />}
+            />
             <Route path="/cart">
               <CartPage />
             </Route>

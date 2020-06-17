@@ -5,7 +5,6 @@ export function orderPost(params) {
     dispatch(orderPostBegin());
     return axios
       .post("https://dev.mod.uz/mdapi/v1/checkout", params)
-      .then(handleErrors)
       .then((res) => res.json())
       .then((json) => {
         dispatch(orderPostSuccess(json));
@@ -13,12 +12,6 @@ export function orderPost(params) {
       })
       .catch((error) => dispatch(orderPostFailure(error)));
   };
-}
-function handleErrors(response) {
-  if (!response.ok) {
-    throw Error(response.statusText);
-  }
-  return response;
 }
 
 export const ORDER_POST_BEGIN = "ORDER_POST_BEGIN";

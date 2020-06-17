@@ -2,7 +2,7 @@ import React from "react";
 import arrow from "../../assets/images/right.png";
 import Size from "./size";
 
-function Table() {
+function Table({size}) {
   return (
     <div className="size_table" >
       <div className="flex_just_bet">
@@ -11,7 +11,7 @@ function Table() {
           Таблица размеров <img src={arrow} alt="" />{" "}
         </p>
       </div>
-        <Size />
+        <Size size={size} />
     </div>
   );
 }

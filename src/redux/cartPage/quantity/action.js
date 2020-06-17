@@ -6,7 +6,7 @@ export function quantity(valu, product) {
     return axios
       .patch(`https://dev.mod.uz/mdapi/v1/carts/${product}/quantity/${valu}`, {
         headers: {
-          "cart-uid": "1",
+          "cart-uid": window.localStorage.getItem("uid"),
           Accept: "application/json",
           "Content-Type": "application/json",
         },
