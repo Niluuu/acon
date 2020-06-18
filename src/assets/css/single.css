@@ -333,3 +333,275 @@
   color: red !important;
   text-align: center;
 }
+
+.order_issued {
+  padding: 28px 20px;
+  color: #222222;
+}
+
+.order_issued p {
+  margin-bottom: 0px !important;
+}
+
+.order_confirm {
+  background: #efefef;
+  padding: 30px;
+}
+
+.order_confirm p {
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #222222;
+}
+
+.order_confirm strong p {
+  font-size: 22px;
+  line-height: 25px;
+  color: #222222;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.order_info {
+  padding: 20px 0px;
+  border-bottom: 1px solid #efefef;
+}
+
+.order_info .type_send {
+  font-weight: bold;
+}
+
+.order_info .address {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.order_info .payment {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.order_info p {
+  margin-bottom: 10px !important;
+}
+
+.order_detail,
+.order_price {
+  padding: 20px 0px;
+  border-bottom: 1px solid #efefef;
+}
+
+.order_detail .d_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order_detail .d_flex img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.order_detail .img_row {
+  margin-bottom: 20px;
+}
+
+.order_detail .img_row {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.order_detail .code {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.order_detail .price {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #222222;
+}
+
+.order_detail .size {
+  font-weight: bold;
+}
+
+.order_price p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.order_price .total_price p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.order_price > div {
+  padding-bottom: 20px;
+}
+
+.text_row p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.text_row .code {
+  font-weight: bold;
+  color: #222222 !important;
+}
+
+.order_issued button {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.order_issued .absolute {
+  position: absolute;
+  padding: 4px;
+}
+
+.text_row {
+  padding: 20px 0px;
+}
+
+.order_issued .message {
+  border: 2px solid #222222;
+  background: #fff;
+  margin-top: 100px;
+}
+
+.order_issued .call {
+  color: #fff;
+  background: #222222;
+  border: none;
+}
+
+.find_order {
+  padding: 30px;
+}
+
+.find_order .type_row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find_order .circle {
+  width: 90px;
+  height: 90px;
+  background: #efefef;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.type_row p {
+  padding-top: 18px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.find_order .map .absolute {
+  position: relative;
+  right: 33px;
+  top: -12px;
+}
+
+.find_order .clock .absolute {
+  position: relative;
+  top: -6px;
+  left: -26px;
+}
+
+.find_order .circle .img_row {
+  position: relative;
+  left: 5px;
+}
+
+.find_order .clock .circle .img_row {
+  left: 8px;
+}
+
+.find .border {
+  width: 100%;
+  height: 1px;
+  background: #efefef;
+  border: none !important;
+}
+
+.find .accordion {
+  padding: 20px 0px;
+}
+
+.find .categories-menu {
+  padding: 0 !important;
+}
+
+.find .categories-menu li {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.find .accordion .my_accordion_btn_cont {
+  font-size: 14px;
+  line-height: 16px;
+  color: #222222;
+  font-weight: normal !important;
+}
+
+.find .accordion .left {
+  border-bottom: 1px solid #efefef;
+  padding: 20px 30px 20px 0px;
+  position: relative;
+  left: 20px;
+}
+.find .accordion .border-none {
+  border: none !important;
+}
+
+.find .accordion .bg_dark {
+  background: #222222 !important;
+  color: #fff !important;
+}
+
+.find .order_issued .message {
+  margin-top: 0px;
+}
+
+.example_page {
+  padding: 20px;
+}
+
+.example_page .title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.example_page .title span {
+  font-weight: bold;
+}
+
+.example_page .text {
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+}

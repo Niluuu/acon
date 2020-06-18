@@ -10,6 +10,9 @@ import OrderPage from "./page/orderPage";
 import ContactPage from "./page/contactPage";
 import WhyWePage from "./page/whyWePage";
 import Sidebar from "./components/common/sidebar";
+import OrderIssued from "./page/orderIssued";
+import FindOrderPage from "./page/findOrderPage";
+import FirstExamplePage from "./page/firstExamplePage";
 
 function App() {
   return (
@@ -40,6 +43,15 @@ function App() {
             </Route>
             <Route path="/whyWe">
               <WhyWePage />
+            </Route>
+            <Route path="/orderIssued">
+              <OrderIssued />
+            </Route>
+            <Route path="/findOrder">
+              <FindOrderPage />
+            </Route>
+            <Route path="/example">
+              <FirstExamplePage />
             </Route>
             <Route>
               <IndexPage />
