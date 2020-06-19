@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Banner from "../components/category/banner";
 import Filter from "../components/category/filter";
+import FilterMenu from "../components/category/filterMenu";
 import CategoryList from "../components/category/categoryList";
 import { connect } from "react-redux";
 import { fetchFunc } from "../redux/categoryPage/action";
@@ -13,7 +14,8 @@ class CategoryPage extends Component {
   render() {
     const { category } = this.props;
     return (
-      <section id="content" className="mt-50px">
+      <section id="content" className="filter-container">
+        <FilterMenu />
         {category && category.products && category.products.data && (
           <div className="category-container">
             <div className="container">
