@@ -7,6 +7,7 @@ import img from "../assets/images/light-basket.png";
 import { connect } from "react-redux";
 import { fetchSingle } from "../redux/singlePage/action";
 import { addCart } from "../redux/cartPage/addCart/action";
+import Colors from "../components/single/colors";
 
 class SinglePage extends React.Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ class SinglePage extends React.Component {
           <div className="top-single-container mb-45px">
             <SimpleSlider product={data} />
             <Info product={data} />
+            <Colors />
             <button
               className="add_to_cart"
               onClick={() => this.handleClick(data.product.id)}

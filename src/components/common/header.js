@@ -25,9 +25,9 @@ function Header() {
               </Link>
             </div>
             <div className="col flex_jus_end">
-              <a href="#" className="heart-icon">
+              <Link className="heart-icon" to="/profile/wished">
                 <img src={img2} alt="" />
-              </a>
+              </Link>
               <Link className="cart-mobile" to="/cart">
                 <img src={img3} alt="" />
               </Link>
