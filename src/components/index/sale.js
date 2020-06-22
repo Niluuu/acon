@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../assets/images/tmp/m1.jpg";
+import { Link } from "react-router-dom";
 
 function Sale() {
   return (
@@ -7,15 +8,15 @@ function Sale() {
       <h3>Еще больше товаров!</h3>
       <h5>Самые низкие цены на товар</h5>
       <div className="relative-container">
-        <a href="#" className="big-image">
+        <Link to="/category" className="big-image">
           <img src={img} alt="" className="img-fluid" />
-        </a>
+        </Link>
         <div className="tc-white">
           <div className="tc-silver-title">Nuenhenen der Wotnche</div>
           <div className="tc-title">Легкие куртки и ветровки</div>
-          <a href="#" className="more">
+          <Link to="/category" className="more">
             Подробнее
-          </a>
+          </Link>
         </div>
       </div>
     </div>

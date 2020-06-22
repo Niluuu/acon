@@ -19,6 +19,7 @@ import Orders from "./components/profile/orders";
 import Address from "./components/profile/address";
 import Wished from "./components/profile/wished";
 import Settings from "./components/profile/settings";
+import Form from "./components/contact/form";
 
 function App() {
   return (
@@ -76,6 +77,9 @@ function App() {
             </Route>
             <Route path="/profile">
               <ProfilePage />
+            </Route>
+            <Route path="/form">
+              <Form />
             </Route>
             <Route>
               <IndexPage />

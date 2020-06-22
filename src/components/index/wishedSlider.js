@@ -41,7 +41,7 @@ export default connect(mapStateToProps)(WishedSlider);
 
 const Product = ({ product }) => {
   return (
-    <div className="item" style={{ marginRight: "33px" }}>
+    <div className="item" style={{ margin: "15px 10px" }}>
       <div className="cc-block">
         <a href="#" className="wish-icon">
           <i className="fa fa-heart-o" aria-hidden="true"></i>

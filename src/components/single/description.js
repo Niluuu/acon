@@ -1,8 +1,9 @@
 import React from "react";
 import CategorySlider from "../single/categorySlider";
 import Tabs from "./tabs";
+import { Link } from "react-router-dom";
 
-function Description({product}) {
+function Description({ product }) {
   return (
     <div className="col-sm-6">
       <div className="single-main-block">
@@ -60,7 +61,11 @@ function Description({product}) {
       </div>
       <div className="categorys faq_row flex_just_bet">
         <h2>Остались вопросы?</h2>
-        <button className="connect_us">Написать нам</button>
+        <button className="connect_us">
+          <Link to="/form" style={{ color: "#000" }}>
+            Написать нам
+          </Link>
+        </button>
       </div>
       <div className="categorys border_top flex_just_bet">
         <Tabs product={product} />

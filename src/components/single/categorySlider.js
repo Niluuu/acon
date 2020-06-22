@@ -1,43 +1,35 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React, { useState } from "react";
+const data = ["Все брюки", "Все куртки", "куртки Puma", "Puma"];
 
-const data = [
-  "Все брюки",
-  "Все куртки Puma",
-  "Все куртки Puma",
-  "Все куртки Puma",
-];
+export default function CategorySlider() {
+  const [state, setState] = useState("Все брюки");
 
-export default class CategorySlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    };
-    return (
-      <div>
-        <Slider {...settings}>
-          {data.map((s) => {
-            return (
-              <div key={Math.random()} className="categorys_slider">
-                <input type="radio" value={1} />
-                <div
-                  className={
-                    s === "Все брюки"
-                      ? "show_category show_category_active"
-                      : "show_category"
-                  }
-                >
-                  <p>{s}</p>
-                </div>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-    );
+  function handleOptionChange(e) {
+    setState(e.target.value);
   }
+  return (
+    <div className="category_slider_row">
+      {data.map((s) => {
+        return (
+          <div key={Math.random()} className="categorys_slider">
+            <input
+              type="radio"
+              value={s}
+              checked={state === s}
+              onChange={(e) => handleOptionChange(e)}
+            />
+            <div
+              className={
+                s === state
+                  ? "show_category show_category_active"
+                  : "show_category"
+              }
+            >
+              <p>{s}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }

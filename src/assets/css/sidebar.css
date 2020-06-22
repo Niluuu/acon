@@ -1,10 +1,15 @@
 .filter .bm-burger-button {
   position: relative;
-  width: 16px;
-  height: 13px;
-  top: 72px;
+  width: 92%;
+  height: 41px;
+  top: 275px;
   float: right;
-  left: -35px !important;
+  left: -17px !important;
+  opacity: 0;
+}
+
+.btn-filter-mobile:focus {
+  outline: none !important;
 }
 
 .filter-container {
@@ -151,7 +156,7 @@
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #222222;
 }
 .filter .bm-cross-button {
   display: block !important;
@@ -293,6 +298,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .menu-tabs .nav-link {
   color: #888 !important;
   padding: 6px !important;
+  font-size: 15px;
 }
 
 .menu-tabs .nav-tabs .nav-item.show .nav-link,
@@ -396,8 +402,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .colors_row {
-  position: relative;
-  top: -61px;
+  padding-bottom: 30px;
 }
 
 .colors_row .d_flex {
@@ -948,4 +953,65 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .details_page .form-group .form-control {
   margin-bottom: 0;
+}
+
+.menu-tabs:focus {
+  border: none !important;
+  outline: none;
+}
+
+.slide_row {
+  display: flex;
+  width: 80%;
+  overflow: scroll;
+  position: relative;
+  float: right;
+  top: -92px;
+  height: 100%;
+}
+
+.slide_row::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.slide_row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.slide_row::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+.slide_row::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.category_slider_row {
+  display: flex;
+  overflow: scroll;
+}
+
+.category_slider_row {
+  height: 92px;
+}
+.category_slider_row::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.category_slider_row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.category_slider_row::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+.category_slider_row::-webkit-scrollbar-thumb:hover {
+  background: transparent;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import img from "../../assets/images/tmp/t1.jpg";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 export default class HeaderSlider extends Component {
   render() {
@@ -21,9 +22,12 @@ export default class HeaderSlider extends Component {
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
-              <a href="#" className="more">
-                Подробнее
-              </a>
+              <span className="more">
+                <Link to="/category" style={{ color: "#000" }}>
+                  {" "}
+                  Подробнее
+                </Link>
+              </span>
             </div>
           </div>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
@@ -32,9 +36,12 @@ export default class HeaderSlider extends Component {
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
-              <a href="#" className="more">
-                Подробнее
-              </a>
+              <span className="more">
+                <Link to="/category" style={{ color: "#000" }}>
+                  {" "}
+                  Подробнее
+                </Link>
+              </span>
             </div>
           </div>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
@@ -43,9 +50,12 @@ export default class HeaderSlider extends Component {
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
-              <a href="#" className="more">
-                Подробнее
-              </a>
+              <span className="more">
+                <Link to="/category" style={{ color: "#000" }}>
+                  {" "}
+                  Подробнее
+                </Link>
+              </span>
             </div>
           </div>
         </Slider>

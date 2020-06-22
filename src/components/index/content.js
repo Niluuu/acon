@@ -10,6 +10,7 @@ import Product from "../common/product";
 import BottomBlock from "./bottomBlock";
 import Descrition from "./descrition";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class Content extends React.Component {
   render() {
@@ -25,9 +26,9 @@ class Content extends React.Component {
           </div>
           <div className="block-container mb-35px">
             <NameWithLink name={"Пуховики и зимние куртки"} link={"#"} />
-            <a href="#" className="big-image">
+            <Link to="/category" className="big-image">
               <img src={img} alt="" className="img-fluid" />
-            </a>
+            </Link>
           </div>
           <div className="block-container">
             <NameWithLink name={"Сникерсы"} link={"#"} />
@@ -36,9 +37,9 @@ class Content extends React.Component {
           <div className="block-container mb-35px">
             <h3>Еще больше товаров!</h3>
             <h5>Самые низкие цены на товар</h5>
-            <a href="#" className="big-image">
+            <Link to="/category" className="big-image">
               <img src={img} alt="" className="img-fluid" />
-            </a>
+            </Link>
           </div>
           <WishedSlider />
           <div className="block-container mb-50px">

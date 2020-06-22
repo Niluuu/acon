@@ -20,12 +20,12 @@ class Form extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="profile_child">
+        {/* <div className="profile_child">
           <Link to="/profile">
             <img src={back} alt="" className="back_to" />
           </Link>
           <p className="title">Мои данные</p>
-        </div>
+        </div> */}
         <div className="profile_page details_page">
           <label htmlFor="name">ИМЯ И ФАМИЛИЯ</label>
           <br />

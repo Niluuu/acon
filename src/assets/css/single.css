@@ -70,8 +70,8 @@
 }
 
 .size_slider input {
-  height: 65px;
-  width: 49px;
+  height: 60px;
+  width: 72px;
   opacity: 0;
 }
 
@@ -121,6 +121,7 @@
 
 .size_slider .sizes {
   padding: 0px 10px !important;
+  width: 81px;
 }
 
 .sizes .light {
@@ -282,6 +283,19 @@
 .categorys_slider input {
   opacity: 0;
   width: max-content;
+  width: 133px;
+  height: 41px;
+  position: relative;
+  z-index: 100;
+}
+
+.categorys_slider {
+  padding: 0px 20px;
+}
+
+.categorys_slider .show_category {
+  position: relative;
+  top: -17px;
 }
 
 .categorys_slider .slick-slider {
