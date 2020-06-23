@@ -10,6 +10,8 @@ import "../src/assets/css/ar.css";
 import "../src/assets/css/style.min.css";
 import "../src/assets/css/sidebar.css";
 import "../src/assets/css/single.css";
+import "../src/assets/css/slick/slick.css";
+import "../src/assets/css/slick/slick2.css";
 
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";

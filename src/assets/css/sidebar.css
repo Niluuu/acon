@@ -1394,3 +1394,56 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: absolute;
   right: 33px;
 }
+
+.header-bottom {
+  padding: 20px 15px;
+}
+
+.header-bottom .search {
+  background: #efefef;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.header-bottom .search img {
+  margin: 0px 20px 0px 16px;
+}
+
+.header-bottom input {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  width: 82%;
+}
+
+.header-bottom {
+  border-top: none;
+  box-shadow: none;
+}
+
+input {
+  outline: none !important;
+}
+
+.index_page .nav {
+  border-bottom: none !important;
+  background: #fff !important;
+}
+
+.index_page .nav-tabs .nav-link {
+  text-transform: uppercase !important;
+  color: #000000 !important;
+  background: #ffff;
+  color: #bdc3c7 !important;
+}
+
+.index_page .nav .active {
+  color: #222222 !important;
+  font-weight: bold !important;
+}
+
+.index_page .nav {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  justify-content: center;
+}

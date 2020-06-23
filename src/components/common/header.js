@@ -1,8 +1,8 @@
 import React from "react";
 import img from "../../assets/images/MOD.png";
-import img1 from "../../assets/images/h1.png";
-import img2 from "../../assets/images/h2.png";
-import img3 from "../../assets/images/h3.png";
+import img1 from "../../assets/images/header/search1.png";
+import img2 from "../../assets/images/header/heart.png";
+import img3 from "../../assets/images/header/shopping.png";
 import { Link } from "react-router-dom";
 
 function Header() {
