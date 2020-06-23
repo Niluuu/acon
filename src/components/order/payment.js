@@ -10,6 +10,7 @@ import i5 from "../../assets/images/order/image5.png";
 import i6 from "../../assets/images/order/image6.png";
 import i7 from "../../assets/images/order/image7.png";
 import i8 from "../../assets/images/order/image8.png";
+import arrow from "../../assets/images/right.png";
 
 import ext from "../../assets/images/order/ext.png";
 import up from "../../assets/images/order/up.png";
@@ -52,6 +53,7 @@ class Payment extends Component {
                   <img src={img} alt="" />
                 </div>
                 <p> {title}</p>
+                <img src={arrow} alt="" className="arrow" />
               </li>
             );
           })}
