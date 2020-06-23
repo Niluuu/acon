@@ -11,6 +11,8 @@ import Colors from "../components/single/colors";
 
 class SinglePage extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
+
     this.props.dispatch(fetchSingle(this.props.match.params.id));
   }
 

@@ -10,6 +10,10 @@ import arrow from "../assets/images/order/black-arrow.png";
 import email from "../assets/images/profile/email.png";
 
 class ProfilePage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="profile_page">

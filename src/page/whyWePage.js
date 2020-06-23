@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import List from "../components/whyWe/list";
 import Vacancy from "../components/whyWe/vacancy";
 
 function WhyWePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section id="content">
       <div className="container">

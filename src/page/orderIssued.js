@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../assets/images/tmp/c4.jpg";
 import black from "../assets/images/order/black-arrow.png";
 import call from "../assets/images/order/call.png";
@@ -7,6 +7,9 @@ import message2 from "../assets/images/order/mesage2.png";
 import white from "../assets/images/order/white-arrow.png";
 
 function OrderIssued() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="order_issued">
       <div className="order_confirm">
@@ -64,7 +67,8 @@ function OrderIssued() {
       </div>
       <button className="message">
         <span>
-          <img  className="absolute" src={message} alt="" /> <img src={message2} alt="" />{" "}
+          <img className="absolute" src={message} alt="" />{" "}
+          <img src={message2} alt="" />{" "}
         </span>
         НАПИШИТЕ НАМ
         <span>

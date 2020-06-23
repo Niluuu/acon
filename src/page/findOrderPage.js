@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import i2 from "../assets/images/order/i2.png";
 import i4 from "../assets/images/order/i4.png";
 import i1 from "../assets/images/order/i1.png";
@@ -13,6 +13,9 @@ import message2 from "../assets/images/order/mesage2.png";
 import white from "../assets/images/order/white-arrow.png";
 
 function FindOrderPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="find">
       <div className="find_order">

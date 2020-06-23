@@ -8,6 +8,7 @@ import { fetchFunc } from "../redux/categoryPage/action";
 
 class CategoryPage extends Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.dispatch(fetchFunc(89));
   }
 

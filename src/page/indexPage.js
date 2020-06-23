@@ -5,6 +5,8 @@ import { fetchHome } from "../redux/index/action";
 
 class indexPage extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
+
     this.props.dispatch(fetchHome());
   }
 

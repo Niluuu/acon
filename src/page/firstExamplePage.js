@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import black from "../assets/images/order/black-arrow.png";
 import call from "../assets/images/order/call.png";
 import message from "../assets/images/order/mesage.png";
@@ -6,6 +6,9 @@ import message2 from "../assets/images/order/mesage2.png";
 import white from "../assets/images/order/white-arrow.png";
 
 function FirstExamplePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <React.Fragment>
       <div className="example_page">

@@ -30,6 +30,9 @@ class Payment extends Component {
   state = {
     dostavka: "1",
   };
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   handleClick = (e) => {
     this.setState({ dostavka: e.target.value });
