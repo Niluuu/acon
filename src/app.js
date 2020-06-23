@@ -6,7 +6,7 @@ import Footer from "./components/common/footer";
 import CategoryPage from "./page/categoryPage";
 import SinglePage from "./page/singlePage";
 import CartPage from "./page/cartPage";
-import OrderPage from "./page/orderPage";
+// import OrderPage from "./page/orderPage";
 import ContactPage from "./page/contactPage";
 import WhyWePage from "./page/whyWePage";
 import Sidebar from "./components/common/sidebar";
@@ -20,6 +20,11 @@ import Address from "./components/profile/address";
 import Wished from "./components/profile/wished";
 import Settings from "./components/profile/settings";
 import Form from "./components/contact/form";
+import Order from "./components/order/order";
+import Order2 from "./components/order/order2";
+import AddressOrder from "./components/order/addressOrder";
+import TypePay from "./components/order/typePay";
+import Payment from "./components/order/payment";
 
 function App() {
   return (
@@ -43,7 +48,19 @@ function App() {
               <CartPage />
             </Route>
             <Route path="/order">
-              <OrderPage />
+              <Order />
+            </Route>
+            <Route path="/code">
+              <Order2 />
+            </Route>
+            <Route path="/addressOrder">
+              <AddressOrder />
+            </Route>
+            <Route path="/typePay">
+              <TypePay />
+            </Route>
+            <Route path="/payment">
+              <Payment/>
             </Route>
             <Route path="/contact">
               <ContactPage />
