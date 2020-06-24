@@ -24,7 +24,7 @@ class Content extends React.Component {
         {/* <div className="top-block mb-50px">
           <HeaderSlider />
         </div> */}
-        <Tabs defaultActiveKey="женщинам">
+        <Tabs defaultActiveKey="женщинам" id="controlled-tab-example">
           <Tab eventKey="женщинам" title="женщинам">
             <div className="container">
               <div className="catalog-container">

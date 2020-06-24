@@ -12,6 +12,7 @@ class CatalogSlider extends Component {
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 2,
+      adaptiveHeight: true,
     };
     return (
       <div className="catalog_slider">
