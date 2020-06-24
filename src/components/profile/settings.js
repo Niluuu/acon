@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Form, FormCheck, Button } from "react-bootstrap";
 import back from "../../assets/images/order/back.png";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Settings() {
   const [swt, setSwt] = React.useState(true);
@@ -11,7 +12,7 @@ function Settings() {
     <div className="settings_page">
       <div className="profile_child">
         <Link to="/profile">
-          <img src={back} alt="" className="back_to" />
+          <LazyLoadImage  src={back} alt="" className="back_to" />
         </Link>
         <p className="title">Настройки</p>
       </div>

@@ -13,9 +13,8 @@ function WishProduct({ product }) {
           </span>
           <a className="cc-image">
             <LazyLoadImage
-              src={img} // use normal <img> attributes as props
+              src={img} 
             />
-            {/* <img src={img} alt="" /> */}
           </a>
           <div className="cc-content">
             <div className="row">

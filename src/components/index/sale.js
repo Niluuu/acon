@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../assets/images/tmp/m1.jpg";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Sale() {
   return (
@@ -9,7 +10,7 @@ function Sale() {
       <h5>Самые низкие цены на товар</h5>
       <div className="relative-container">
         <Link to="/category" className="big-image">
-          <img src={img} alt="" className="img-fluid" />
+          <LazyLoadImage  src={img} alt="" className="img-fluid" />
         </Link>
         <div className="tc-white">
           <div className="tc-silver-title">Nuenhenen der Wotnche</div>

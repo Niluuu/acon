@@ -14,6 +14,7 @@ import arrow from "../../assets/images/right.png";
 
 import ext from "../../assets/images/order/ext.png";
 import up from "../../assets/images/order/up.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const list = [
   { img: i1, title: "VISA" },
@@ -44,7 +45,7 @@ class Payment extends Component {
         <div className="profile_child">
           <p className="title">ОФОРМЛЕНИЕ ЗАКАЗА</p>
           <Link to="/cart">
-            <img src={ext} alt="" className="close" />
+            <LazyLoadImage  src={ext} alt="" className="close" />
           </Link>
         </div>
 
@@ -53,16 +54,16 @@ class Payment extends Component {
             return (
               <li>
                 <div className="img_row">
-                  <img src={img} alt="" />
+                  <LazyLoadImage  src={img} alt="" />
                 </div>
                 <p> {title}</p>
-                <img src={arrow} alt="" className="arrow" />
+                <LazyLoadImage  src={arrow} alt="" className="arrow" />
               </li>
             );
           })}
         </ul>
         <div className="total">
-          <img src={up} alt="" />
+          <LazyLoadImage  src={up} alt="" />
           <div className="p">
             <p className="t">Всего 5 999 руб.</p>
             <p className="under">Включая налоги</p>

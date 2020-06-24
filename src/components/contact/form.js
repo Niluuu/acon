@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import right from "../../assets/images/order/white-arrow.png";
 import { Link } from "react-router-dom";
 import back from "../../assets/images/order/back.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class Form extends Component {
   state = {
@@ -22,7 +23,7 @@ class Form extends Component {
       <React.Fragment>
         {/* <div className="profile_child">
           <Link to="/profile">
-            <img src={back} alt="" className="back_to" />
+            <LazyLoadImage  src={back} alt="" className="back_to" />
           </Link>
           <p className="title">Мои данные</p>
         </div> */}
@@ -61,7 +62,7 @@ class Form extends Component {
           />
           <br />
           <button className="under_btn">
-            ЗАДАТЬ ВОПРОС <img src={right} alt="" />
+            ЗАДАТЬ ВОПРОС <LazyLoadImage  src={right} alt="" />
           </button>
         </div>
       </React.Fragment>

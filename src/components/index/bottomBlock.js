@@ -1,9 +1,11 @@
 import React from "react";
 import img from "../../assets/images/tmp/bottom1.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 function BottomBlock() {
   return (
     <div className="bottom-block" style={{ backgroundImage: `url(${img})` }}>
-      <img src={img} alt="" />
+      <LazyLoadImage src={img} />
       <div className="bb-abs">
         <div className="row">
           <div className="col-sm-6">

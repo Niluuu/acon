@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import right from "../../assets/images/right.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 function FooterCustomToggle({ children, eventKey }) {
   const currentEventKey = useContext(AccordionContext);
@@ -18,7 +20,7 @@ function FooterCustomToggle({ children, eventKey }) {
       }
     >
       {children}
-      <img
+      <LazyLoadImage 
         src={right}
         alt=""
         className={

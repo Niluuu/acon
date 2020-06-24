@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../assets/images/tmp/c4.jpg";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Product({ product }) {
   return (
@@ -15,7 +16,7 @@ function Product({ product }) {
                     <i className="fa fa-heart-o" aria-hidden="true"></i>
                   </span>
                   <span className="cc-image">
-                    <img src={img} alt="" />
+                    <LazyLoadImage  src={img} alt="" />
                   </span>
                   <div className="cc-content">
                     <div className="row">

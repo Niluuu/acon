@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class PaySlider extends Component {
   render() {
@@ -19,7 +20,7 @@ export default class PaySlider extends Component {
               return (
                 <div id={p.id} key={Math.random()} className="so item">
                   {p.name}
-                  <img src={p.media} alt="" />
+                  <LazyLoadImage  src={p.media} alt="" />
                 </div>
               );
             })}

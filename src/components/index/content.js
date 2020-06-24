@@ -34,11 +34,7 @@ class Content extends React.Component {
               <div className="block-container mb-35px">
                 <NameWithLink name={"Пуховики и зимние куртки"} link={"#"} />
                 <Link to="/category" className="big-image">
-                  <LazyLoadImage
-                    src={img}
-                    className="img-fluid" 
-                  />
-                  {/* <img  /> */}
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <div className="block-container">
@@ -49,7 +45,7 @@ class Content extends React.Component {
                 <h3>Еще больше товаров!</h3>
                 <h5>Самые низкие цены на товар</h5>
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <WishedSlider />
@@ -87,7 +83,7 @@ class Content extends React.Component {
               <div className="block-container mb-35px">
                 <NameWithLink name={"Пуховики и зимние куртки"} link={"#"} />
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <div className="block-container">
@@ -98,7 +94,7 @@ class Content extends React.Component {
                 <h3>Еще больше товаров!</h3>
                 <h5>Самые низкие цены на товар</h5>
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <WishedSlider />
@@ -136,7 +132,7 @@ class Content extends React.Component {
               <div className="block-container mb-35px">
                 <NameWithLink name={"Пуховики и зимние куртки"} link={"#"} />
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <div className="block-container">
@@ -147,7 +143,7 @@ class Content extends React.Component {
                 <h3>Еще больше товаров!</h3>
                 <h5>Самые низкие цены на товар</h5>
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <WishedSlider />
@@ -185,7 +181,7 @@ class Content extends React.Component {
               <div className="block-container mb-35px">
                 <NameWithLink name={"Пуховики и зимние куртки"} link={"#"} />
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <div className="block-container">
@@ -196,7 +192,7 @@ class Content extends React.Component {
                 <h3>Еще больше товаров!</h3>
                 <h5>Самые низкие цены на товар</h5>
                 <Link to="/category" className="big-image">
-                  <img src={img} alt="" className="img-fluid" />
+                  <LazyLoadImage src={img} className="img-fluid" />
                 </Link>
               </div>
               <WishedSlider />

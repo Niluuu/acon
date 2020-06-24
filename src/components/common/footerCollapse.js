@@ -2,6 +2,7 @@ import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import FooterCustomToggle from "./footerCustomToggle";
 import flag from "../../assets/images/flag.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const items = [
   { id: Math.random(), title: "ПРИЛОЖЕНИЕ MOD" },
@@ -34,7 +35,7 @@ function FooterCollapse() {
           <li className="light_collapse">
             <FooterCustomToggle key={Math.random()} eventKey={5}>
               Республика Узбекистан, UZS{" "}
-              <img src={flag} style={{ marginLeft: "8px" }} />
+              <LazyLoadImage  src={flag} style={{ marginLeft: "8px" }} />
             </FooterCustomToggle>
             <Accordion.Collapse eventKey={5}>
               <div className="col">......</div>

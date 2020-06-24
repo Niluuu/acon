@@ -3,6 +3,7 @@ import img from "../../assets/images/tmp/c1.jpg";
 import { connect } from "react-redux";
 import { fetchRemoveCart } from "../../redux/cartPage/delateCart/action";
 import { quantity } from "../../redux/cartPage/quantity/action";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class TableCart extends Component {
   state = {
@@ -30,7 +31,7 @@ class TableCart extends Component {
                 <td>
                   <div className="cart-single-block">
                     <div className="csb-image">
-                      <img src={img} alt="" />
+                      <LazyLoadImage  src={img} alt="" />
                     </div>
                   </div>
                 </td>

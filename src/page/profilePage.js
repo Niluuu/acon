@@ -8,6 +8,7 @@ import people from "../assets/images/profile/people.png";
 import settings from "../assets/images/profile/settings.png";
 import arrow from "../assets/images/order/black-arrow.png";
 import email from "../assets/images/profile/email.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class ProfilePage extends Component {
   componentDidMount() {
@@ -18,7 +19,7 @@ class ProfilePage extends Component {
     return (
       <div className="profile_page">
         <div className="cart">
-          <img src={ava} alt="" />
+          <LazyLoadImage  src={ava} alt="" />
           <div className="cart_content">
             <p className="title">
               ЗДРАВСТВУЙТЕ, <strong>Buyer!</strong>
@@ -31,41 +32,41 @@ class ProfilePage extends Component {
           <ul>
             <li>
               <Link to="/profile/order">
-                <img src={order} alt="" className="link_icon" />
-                Мои заказы <img src={arrow} alt="" className="arrow_icon" />
+                <LazyLoadImage  src={order} alt="" className="link_icon" />
+                Мои заказы <LazyLoadImage  src={arrow} alt="" className="arrow_icon" />
               </Link>
             </li>
             <li>
               <Link to="/profile/details">
-                <img src={people} alt="" className="link_icon" />
-                Мои данные <img src={arrow} alt="" className="arrow_icon" />
+                <LazyLoadImage  src={people} alt="" className="link_icon" />
+                Мои данные <LazyLoadImage  src={arrow} alt="" className="arrow_icon" />
               </Link>
             </li>
             <li>
               <Link to="/profile/address">
-                <img src={loc} alt="" className="link_icon" />
-                Мои адреса <img src={arrow} alt="" className="arrow_icon" />
+                <LazyLoadImage  src={loc} alt="" className="link_icon" />
+                Мои адреса <LazyLoadImage  src={arrow} alt="" className="arrow_icon" />
               </Link>
             </li>
             <li>
               <Link to="/profile/wished">
-                <img src={heart} alt="" className="link_icon" />
-                Избранные <img src={arrow} alt="" className="arrow_icon" />
+                <LazyLoadImage  src={heart} alt="" className="link_icon" />
+                Избранные <LazyLoadImage  src={arrow} alt="" className="arrow_icon" />
               </Link>
             </li>
             <li>
               <Link to="/profile/settings">
-                <img src={settings} alt="" className="link_icon" />
-                Настройки <img src={arrow} alt="" className="arrow_icon" />
+                <LazyLoadImage  src={settings} alt="" className="link_icon" />
+                Настройки <LazyLoadImage  src={arrow} alt="" className="arrow_icon" />
               </Link>
             </li>
           </ul>
         </div>
 
         <button className="under_btn white_btn">
-          <img src={email} alt="" className="icon" />
+          <LazyLoadImage  src={email} alt="" className="icon" />
           <span>Остались вопросы?</span>
-          <img src={arrow} alt="" />
+          <LazyLoadImage  src={arrow} alt="" />
         </button>
       </div>
     );

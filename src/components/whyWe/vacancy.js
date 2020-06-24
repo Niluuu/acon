@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../assets/images/tmp/wb1.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Vacancy() {
   return (
@@ -29,7 +30,7 @@ function Vacancy() {
         </div>
         <div className="col-sm-4">
           <div className="wb-image">
-            <img src={img} alt="" />
+            <LazyLoadImage  src={img} alt="" />
           </div>
         </div>
       </div>

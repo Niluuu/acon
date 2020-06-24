@@ -8,6 +8,7 @@ import product from "../../assets/images/profile/product.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const products = [
   {
@@ -38,14 +39,14 @@ function Wished() {
     <div className="orders_page wished">
       <div className="profile_child">
         <Link to="/profile">
-          <img src={back} alt="" className="back_to" />
+          <LazyLoadImage  src={back} alt="" className="back_to" />
         </Link>
         <p className="title">ИЗБРАННОЕ</p>
       </div>
       <div className="content">
         {state === null ? (
           <div className="empty_row">
-            <img src={address} alt="" />
+            <LazyLoadImage  src={address} alt="" />
             <p className="title">Здесь пока пусто</p>
             <p className="under_title">
               Вы пока ничего не добавили в избранное{" "}
@@ -66,9 +67,9 @@ function Wished() {
                       <div className="items">
                         <div className="item_top">
                           <div className="close">
-                            <img src={close} alt="" />
+                            <LazyLoadImage  src={close} alt="" />
                           </div>
-                          <img src={product} alt="" className="product_img" />
+                          <LazyLoadImage  src={product} alt="" className="product_img" />
                           <div className="d_flex">
                             <span className="sale">50%</span>
                             <span className="type">Premium</span>
@@ -88,9 +89,9 @@ function Wished() {
                       <div className="items">
                         <div className="item_top">
                           <div className="close">
-                            <img src={close} alt="" />
+                            <LazyLoadImage  src={close} alt="" />
                           </div>
-                          <img src={product} alt="" className="product_img" />
+                          <LazyLoadImage  src={product} alt="" className="product_img" />
                           <div className="d_flex">
                             <span className="sale">50%</span>
                             <span className="type">Premium</span>

@@ -11,6 +11,7 @@ import call from "../assets/images/order/call.png";
 import message from "../assets/images/order/mesage.png";
 import message2 from "../assets/images/order/mesage2.png";
 import white from "../assets/images/order/white-arrow.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function FindOrderPage() {
   useEffect(() => {
@@ -23,8 +24,8 @@ function FindOrderPage() {
           <div className="type_row map">
             <div className="circle">
               <div className="img_row">
-                <img src={i2} alt="" />
-                <img src={i4} className="absolute" alt="" />
+                <LazyLoadImage  src={i2} alt="" />
+                <LazyLoadImage  src={i4} className="absolute" alt="" />
               </div>
             </div>
             <p>Узнать, где мой заказ</p>
@@ -32,15 +33,15 @@ function FindOrderPage() {
           <div className="type_row clock">
             <div className="circle">
               <div className="img_row">
-                <img src={i1} alt="" />
-                <img src={i3} className="absolute" alt="" />
+                <LazyLoadImage  src={i1} alt="" />
+                <LazyLoadImage  src={i3} className="absolute" alt="" />
               </div>
             </div>
             <p>Узнать срокии условия</p>
           </div>
           <div className="type_row">
             <div className="circle">
-              <img src={m} alt="" />
+              <LazyLoadImage  src={m} alt="" />
             </div>
             <p>Выбрать размер</p>
           </div>
@@ -53,21 +54,21 @@ function FindOrderPage() {
       <div className="order_issued">
         <button className="message">
           <span>
-            <img className="absolute" src={message} alt="" />{" "}
-            <img src={message2} alt="" />{" "}
+            <LazyLoadImage  className="absolute" src={message} alt="" />{" "}
+            <LazyLoadImage  src={message2} alt="" />{" "}
           </span>
           НАПИШИТЕ НАМ
           <span>
-            <img src={black} alt="" />
+            <LazyLoadImage  src={black} alt="" />
           </span>
         </button>
         <button className="call">
           <span>
-            <img src={call} alt="" />
+            <LazyLoadImage  src={call} alt="" />
           </span>
           ПОЗВОНИТЕ НАМ
           <span>
-            <img src={white} alt="" />
+            <LazyLoadImage  src={white} alt="" />
           </span>
         </button>
       </div>

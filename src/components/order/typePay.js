@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import right from "../../assets/images/order/white-arrow.png";
 import { Link } from "react-router-dom";
 import back from "../../assets/images/order/back.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class TypePay extends Component {
   state = {
@@ -24,7 +25,7 @@ class TypePay extends Component {
       <div className="typePay">
         <div className="profile_child">
           <Link to="/cart">
-            <img src={back} alt="" className="back_to" />
+            <LazyLoadImage  src={back} alt="" className="back_to" />
           </Link>
           <p className="title">ОФОРМЛЕНИЕ ЗАКАЗА</p>
         </div>

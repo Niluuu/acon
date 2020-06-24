@@ -2,6 +2,7 @@ import React from "react";
 import img1 from "../../assets/images/tmp/s1.jpg";
 import img2 from "../../assets/images/tmp/s2.jpg";
 import zoomed from "../../assets/images/tmp/ss1.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Zoom() {
   return (
@@ -12,14 +13,14 @@ function Zoom() {
             <li className="active ">
               <div className="sb-image-container">
                 <div className="sb-image">
-                  <img src={img1} alt="" />
+                  <LazyLoadImage  src={img1} alt="" />
                 </div>
               </div>
             </li>
             <li>
               <div className="sb-image-container">
                 <div className="sb-image">
-                  <img src={img2} alt="" />
+                  <LazyLoadImage  src={img2} alt="" />
                 </div>
               </div>
             </li>
@@ -32,12 +33,12 @@ function Zoom() {
           <ul>
             <li className="active">
               <div className="large-photo">
-                <img id="bigImg" className="bigImg" src={zoomed} alt="" />
+                <LazyLoadImage  id="bigImg" className="bigImg" src={zoomed} alt="" />
               </div>
             </li>
             <li>
               <div className="large-photo">
-                <img id="bigImg" className="bigImg" src={img1} alt="" />
+                <LazyLoadImage  id="bigImg" className="bigImg" src={img1} alt="" />
               </div>
             </li>
           </ul>

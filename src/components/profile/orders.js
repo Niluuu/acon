@@ -6,6 +6,7 @@ import order from "../../assets/images/profile/big-order.png";
 import delate from "../../assets/images/profile/delate.png";
 import loop from "../../assets/images/order/search.png";
 import img from "../../assets/images/tmp/c4.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const products = [
   {
@@ -36,14 +37,14 @@ function Orders() {
     <div className="orders_page">
       <div className="profile_child">
         <Link to="/profile">
-          <img src={back} alt="" className="back_to" />
+          <LazyLoadImage  src={back} alt="" className="back_to" />
         </Link>
         <p className="title">Мои заказы</p>
       </div>
       <div className="content">
         {state === null ? (
           <div className="empty_row">
-            <img src={order} alt="" />
+            <LazyLoadImage  src={order} alt="" />
             <p className="title">У ВАС пока нет ЗАКАЗОВ</p>
             <p className="under_title">
               Здесь появится информация о ваших заказах
@@ -54,7 +55,7 @@ function Orders() {
         {state && (
           <div className="product">
             <div className="search_row">
-              <img src={loop} className="loop" alt="" />
+              <LazyLoadImage  src={loop} className="loop" alt="" />
               <input
                 type="text"
                 placeholder="Название товара или номер заказа"
@@ -73,11 +74,11 @@ function Orders() {
                       </p>
                     </div>
                     <div className="delate_btn">
-                      <img src={delate} alt="" />
+                      <LazyLoadImage  src={delate} alt="" />
                     </div>
                   </div>
                   <div className="cart_main d_flex">
-                    <img src={img} alt="" />
+                    <LazyLoadImage  src={img} alt="" />
                     <div className="info">
                       <strong>{p.name}</strong>
                       <p className="brand">Cinikers</p>

@@ -4,6 +4,7 @@ import call from "../assets/images/order/call.png";
 import message from "../assets/images/order/mesage.png";
 import message2 from "../assets/images/order/mesage2.png";
 import white from "../assets/images/order/white-arrow.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function FirstExamplePage() {
   useEffect(() => {
@@ -36,21 +37,21 @@ function FirstExamplePage() {
       <div className="order_issued">
         <button className="message">
           <span>
-            <img className="absolute" src={message} alt="" />{" "}
-            <img src={message2} alt="" />{" "}
+            <LazyLoadImage  className="absolute" src={message} alt="" />{" "}
+            <LazyLoadImage  src={message2} alt="" />{" "}
           </span>
           НАПИШИТЕ НАМ
           <span>
-            <img src={black} alt="" />
+            <LazyLoadImage  src={black} alt="" />
           </span>
         </button>
         <button className="call">
           <span>
-            <img src={call} alt="" />
+            <LazyLoadImage  src={call} alt="" />
           </span>
           ПОЗВОНИТЕ НАМ
           <span>
-            <img src={white} alt="" />
+            <LazyLoadImage  src={white} alt="" />
           </span>
         </button>
       </div>

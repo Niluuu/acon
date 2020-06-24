@@ -8,6 +8,7 @@ import t from "../assets/images/trash.png";
 import { fetchRemoveCart } from "../redux/cartPage/delateCart/action";
 import { quantity } from "../redux/cartPage/quantity/action";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class CartPage extends Component {
   state = {
@@ -46,13 +47,13 @@ class CartPage extends Component {
         <div className="orders_page cart-container">
           <div className="profile_child">
             <p className="title">КОРЗИНА</p>
-            <img src={r} alt="" className="remove" />
+            <LazyLoadImage  src={r} alt="" className="remove" />
           </div>
           <div className="content">
             {this.props.data.cart &&
             Object.keys(this.props.data.cart).length === 0 ? (
               <div className="empty_row">
-                <img src={cart} alt="" />
+                <LazyLoadImage  src={cart} alt="" />
                 <p className="title">Здесь пока пусто</p>
                 <p className="under_title">
                   Вы пока ничего не добавили в корзину
@@ -69,7 +70,7 @@ class CartPage extends Component {
                   return (
                     <div className="product d_flex">
                       <div className="img_row">
-                        <img src={img} alt="" className="prod" />
+                        <LazyLoadImage  src={img} alt="" className="prod" />
                       </div>
                       <div className="info_row">
                         <div className="title_row d_flex">
@@ -77,7 +78,7 @@ class CartPage extends Component {
                             <p className="brand">New Balance</p>
                             <p className="name">{p.name}</p>
                           </div>
-                          <img
+                          <LazyLoadImage 
                             src={t}
                             alt=""
                             className="remove_product"

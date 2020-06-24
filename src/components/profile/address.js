@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import back from "../../assets/images/order/back.png";
 import { useState, useEffect } from "react";
 import address from "../../assets/images/profile/big-address.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const products = [
   {
@@ -33,14 +34,14 @@ function Address() {
     <div className="orders_page address_page">
       <div className="profile_child">
         <Link to="/profile">
-          <img src={back} alt="" className="back_to" />
+          <LazyLoadImage  src={back} alt="" className="back_to" />
         </Link>
         <p className="title">Мои АДРЕСА</p>
       </div>
       <div className="content">
         {state === null ? (
           <div className="empty_row">
-            <img src={address} alt="" />
+            <LazyLoadImage  src={address} alt="" />
             <p className="title">У вас нет адресов</p>
           </div>
         ) : null}

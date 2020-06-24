@@ -8,6 +8,7 @@ import remove from "../../assets/images/order/black-arrow.png";
 import loop from "../../assets/images/order/search.png";
 import check from "../../assets/images/order/check.png";
 import back from "../../assets/images/order/back.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const menu = [
   { name: "БРЕНД" },
@@ -79,7 +80,7 @@ class FilterMenu extends Component {
                   <li key={Math.random()} onClick={(e) => this.handleOpen(e)}>
                     <div className="list">
                       <span>{name}</span>
-                      <img src={black} alt="" />{" "}
+                      <LazyLoadImage  src={black} alt="" />{" "}
                     </div>
                   </li>
                 );
@@ -106,7 +107,7 @@ class FilterMenu extends Component {
               }
             >
               <div className="name_row">
-                <img
+                <LazyLoadImage 
                   src={back}
                   className="remove"
                   onClick={() => this.back()}
@@ -115,7 +116,7 @@ class FilterMenu extends Component {
                 <p className="top_title">БРЕНДЫ</p>
               </div>
               <div className="search_row">
-                <img src={loop} className="loop" alt="" />
+                <LazyLoadImage  src={loop} className="loop" alt="" />
                 <input type="text" placeholder="Поиск" />
               </div>
               <ul>
@@ -124,7 +125,7 @@ class FilterMenu extends Component {
                     <li key={Math.random()}>
                       <div className="list">
                         <span>{name}</span>
-                        <img src={check} alt="" />{" "}
+                        <LazyLoadImage  src={check} alt="" />{" "}
                       </div>
                     </li>
                   );

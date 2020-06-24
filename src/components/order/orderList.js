@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import img from "../../assets/images/tmp/c1.jpg";
 import { connect } from "react-redux";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 class OrderList extends Component {
   render() {
@@ -13,7 +14,7 @@ class OrderList extends Component {
               <div className="row">
                 <div className="col-sm-5 col-5">
                   <div className="szrl-image">
-                    <img className="img-fluid " src={img} alt="" />
+                    <LazyLoadImage  className="img-fluid " src={img} alt="" />
                   </div>
                 </div>
                 <div className="col-sm-7 col-7">

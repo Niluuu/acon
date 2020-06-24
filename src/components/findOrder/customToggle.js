@@ -3,6 +3,7 @@ import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import AccordionContext from "react-bootstrap/AccordionContext";
 import right from "../../assets/images/right.png";
 import white from "../../assets/images/order/white-arrow.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function CustomToggle({ children, eventKey }) {
   const currentEventKey = useContext(AccordionContext);
@@ -25,7 +26,7 @@ function CustomToggle({ children, eventKey }) {
         }
       >
         {children}
-        <img
+        <LazyLoadImage 
           src={isCurrentEventKey && accordionIsExpanded ? white : right}
           alt=""
           className={

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import img from "../../assets/images/tmp/t1.jpg";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class HeaderSlider extends Component {
   render() {
@@ -18,7 +19,7 @@ export default class HeaderSlider extends Component {
         <Slider {...settings}>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
             <a href="#" className="tc-img">
-              <img src={img} alt="" style={{ height: "300px" }} />
+              <LazyLoadImage  src={img} alt="" style={{ height: "300px" }} />
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
@@ -32,7 +33,7 @@ export default class HeaderSlider extends Component {
           </div>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
             <a href="#" className="tc-img">
-              <img src={img} alt="" style={{ height: "300px" }} />
+              <LazyLoadImage  src={img} alt="" style={{ height: "300px" }} />
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
@@ -46,7 +47,7 @@ export default class HeaderSlider extends Component {
           </div>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
             <a href="#" className="tc-img">
-              <img src={img} alt="" style={{ height: "300px" }} />
+              <LazyLoadImage  src={img} alt="" style={{ height: "300px" }} />
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>

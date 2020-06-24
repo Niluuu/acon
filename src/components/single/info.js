@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/productLogo.png";
 import Table from "./table";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Info({ product }) {
   return (

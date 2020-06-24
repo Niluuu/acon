@@ -1,6 +1,7 @@
 import React from "react";
 import arrow from "../../assets/images/right.png";
 import Size from "./size";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Table({size}) {
   return (
@@ -8,7 +9,7 @@ function Table({size}) {
       <div className="flex_just_bet">
         <p className="title">Размеры</p>
         <p className="title_table">
-          Таблица размеров <img src={arrow} alt="" />{" "}
+          Таблица размеров <LazyLoadImage  src={arrow} alt="" />{" "}
         </p>
       </div>
         <Size size={size} />
