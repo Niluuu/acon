@@ -13,6 +13,7 @@ export default class HeaderSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       lazyLoad: true,
+      adaptiveHeight: true,
     };
 
     return (
@@ -20,7 +21,7 @@ export default class HeaderSlider extends Component {
         <Slider {...settings}>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
             <a href="#" className="tc-img">
-              <LazyLoadImage  src={img} alt="" style={{ height: "300px" }} />
+              <LazyLoadImage src={img} alt="" style={{ height: "300px" }} />
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
@@ -34,7 +35,7 @@ export default class HeaderSlider extends Component {
           </div>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
             <a href="#" className="tc-img">
-              <LazyLoadImage  src={img} alt="" style={{ height: "300px" }} />
+              <LazyLoadImage src={img} alt="" style={{ height: "300px" }} />
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
@@ -48,7 +49,7 @@ export default class HeaderSlider extends Component {
           </div>
           <div className="tc-block" style={{ backgroundImage: `url(${img})` }}>
             <a href="#" className="tc-img">
-              <LazyLoadImage  src={img} alt="" style={{ height: "300px" }} />
+              <LazyLoadImage src={img} alt="" style={{ height: "300px" }} />
             </a>
             <div className="tc-white slider-row">
               <div className="tc-title">Легкие куртки и ветровки</div>
