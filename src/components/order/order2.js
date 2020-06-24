@@ -9,6 +9,8 @@ class Order2 extends Component {
     name: "",
   };
   componentDidMount() {
+        window.scrollTo(0, 0);
+
     // this.props.dispatch(fetchFunc(89));
   }
 

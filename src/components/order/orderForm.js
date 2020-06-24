@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 class OrderForm extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+
+    // this.props.dispatch(fetchFunc(89));
+  }
   render() {
     return (
       <div className="shadow-container">

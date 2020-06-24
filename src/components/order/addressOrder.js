@@ -14,6 +14,8 @@ class Order extends Component {
     dostavka: "1",
   };
   componentDidMount() {
+        window.scrollTo(0, 0);
+
     // this.props.dispatch(fetchFunc(89));
   }
 

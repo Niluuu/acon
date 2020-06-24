@@ -9,9 +9,10 @@ class TypePay extends Component {
     dostavka: "1",
   };
   componentDidMount() {
+    window.scrollTo(0, 0);
+
     // this.props.dispatch(fetchFunc(89));
   }
-
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -25,7 +26,7 @@ class TypePay extends Component {
       <div className="typePay">
         <div className="profile_child">
           <Link to="/cart">
-            <LazyLoadImage  src={back} alt="" className="back_to" />
+            <LazyLoadImage src={back} alt="" className="back_to" />
           </Link>
           <p className="title">ОФОРМЛЕНИЕ ЗАКАЗА</p>
         </div>

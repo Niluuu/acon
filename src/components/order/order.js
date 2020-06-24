@@ -13,6 +13,8 @@ class Order extends Component {
     question: "",
   };
   componentDidMount() {
+        window.scrollTo(0, 0);
+
     // this.props.dispatch(fetchFunc(89));
   }
 
