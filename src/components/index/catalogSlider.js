@@ -7,6 +7,7 @@ class CatalogSlider extends Component {
   render() {
     const settings = {
       dots: true,
+      lazyLoad: true,
       infinite: true,
       speed: 500,
       slidesToShow: 2,

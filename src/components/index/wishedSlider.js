@@ -13,6 +13,7 @@ class WishedSlider extends Component {
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 2,
+      lazyLoad: true,
     };
     const data = this.props.data[0];
     return (

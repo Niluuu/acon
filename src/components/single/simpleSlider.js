@@ -13,29 +13,30 @@ export default class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      lazyLoad: true,
     };
     return (
       <div className="simple_slider">
         <Slider {...settings}>
           <div>
-            <LazyLoadImage  className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage  className="cover_img" src={img1} />
-            <LazyLoadImage  className="arrow_icon" src={arrow} alt="" />
+            <LazyLoadImage className="heart_icon" src={heart} alt="" />
+            <LazyLoadImage className="cover_img" src={img1} />
+            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
           </div>
           <div>
-            <LazyLoadImage  className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage  className="cover_img" src={img1} />
-            <LazyLoadImage  className="arrow_icon" src={arrow} alt="" />
+            <LazyLoadImage className="heart_icon" src={heart} alt="" />
+            <LazyLoadImage className="cover_img" src={img1} />
+            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
           </div>
           <div>
-            <LazyLoadImage  className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage  className="cover_img" src={img1} />
-            <LazyLoadImage  className="arrow_icon" src={arrow} alt="" />
+            <LazyLoadImage className="heart_icon" src={heart} alt="" />
+            <LazyLoadImage className="cover_img" src={img1} />
+            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
           </div>
           <div>
-            <LazyLoadImage  className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage  className="cover_img" src={img1} />
-            <LazyLoadImage  className="arrow_icon" src={arrow} alt="" />
+            <LazyLoadImage className="heart_icon" src={heart} alt="" />
+            <LazyLoadImage className="cover_img" src={img1} />
+            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
           </div>
         </Slider>
       </div>

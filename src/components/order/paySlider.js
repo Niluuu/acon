@@ -10,6 +10,7 @@ export default class PaySlider extends Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,
+      lazyLoad: true,
     };
     return (
       <div className="shadow-container ">
