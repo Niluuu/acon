@@ -13,7 +13,7 @@ class Order extends Component {
     question: "",
   };
   componentDidMount() {
-        window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
     // this.props.dispatch(fetchFunc(89));
   }
@@ -26,7 +26,7 @@ class Order extends Component {
       <div className="order_list">
         <div className="profile_child">
           <Link to="/cart">
-            <LazyLoadImage  src={back} alt="" className="back_to" />
+            <LazyLoadImage src={back} alt="" className="back_to" />
           </Link>
           <p className="title">ОФОРМЛЕНИЕ ЗАКАЗА</p>
         </div>
@@ -43,7 +43,7 @@ class Order extends Component {
           <label htmlFor="name">ФАМИЛИЯ</label>
           <br />
           <input
-            value={this.state.name}
+            value={this.state.lastName}
             name="lastName"
             type="text"
             onChange={(e) => this.handleChange(e)}
