@@ -14,7 +14,6 @@ class WishedSlider extends Component {
       slidesToShow: 2,
       slidesToScroll: 2,
       lazyLoad: true,
-      
     };
     const data = this.props.data[0];
     return (
@@ -50,7 +49,7 @@ const Product = ({ product }) => {
           <i className="fa fa-heart-o" aria-hidden="true"></i>
         </a>
         <a href="#" className="cc-image">
-          <LazyLoadImage  src={img} alt="" />
+          <LazyLoadImage src={img} alt="" />
         </a>
         <div className="cc-content">
           <div className="row">
