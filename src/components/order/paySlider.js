@@ -11,7 +11,7 @@ export default class PaySlider extends Component {
       slidesToShow: 3,
       slidesToScroll: 3,
       lazyLoad: true,
-      adaptiveHeight: true,
+      
     };
     return (
       <div className="shadow-container ">

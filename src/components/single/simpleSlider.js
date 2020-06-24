@@ -14,7 +14,6 @@ export default class SimpleSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       lazyLoad: true,
-      adaptiveHeight: true,
     };
     return (
       <div className="simple_slider">
