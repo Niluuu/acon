@@ -21,7 +21,7 @@ function Product({ product }) {
                   <div className="cc-content">
                     <div className="row">
                       <div className="col-sm-7">
-                        <span className="cc-title">Zara</span>
+                        <div className="cc-title">Zara</div>
                         <div className="cc-category">
                           <span>{product.title}</span>
                         </div>

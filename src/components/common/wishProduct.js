@@ -19,7 +19,7 @@ function WishProduct({ product }) {
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
-                <span className="cc-title">{product.title}</span>
+                <div className="cc-title">{product.title}</div>
                 <div className="cc-category">
                   <span>Сникерсы</span>
                 </div>

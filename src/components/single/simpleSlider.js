@@ -19,24 +19,24 @@ export default class SimpleSlider extends Component {
       <div className="simple_slider">
         <Slider {...settings}>
           <div>
-            <LazyLoadImage className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage className="cover_img" src={img1} />
-            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
+            <img className="heart_icon" src={heart} alt="" />
+            <img className="cover_img" src={img1} />
+            <img className="arrow_icon" src={arrow} alt="" />
           </div>
           <div>
-            <LazyLoadImage className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage className="cover_img" src={img1} />
-            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
+            <img className="heart_icon" src={heart} alt="" />
+            <img className="cover_img" src={img1} />
+            <img className="arrow_icon" src={arrow} alt="" />
           </div>
           <div>
-            <LazyLoadImage className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage className="cover_img" src={img1} />
-            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
+            <img className="heart_icon" src={heart} alt="" />
+            <img className="cover_img" src={img1} />
+            <img className="arrow_icon" src={arrow} alt="" />
           </div>
           <div>
-            <LazyLoadImage className="heart_icon" src={heart} alt="" />
-            <LazyLoadImage className="cover_img" src={img1} />
-            <LazyLoadImage className="arrow_icon" src={arrow} alt="" />
+            <img className="heart_icon" src={heart} alt="" />
+            <img className="cover_img" src={img1} />
+            <img className="arrow_icon" src={arrow} alt="" />
           </div>
         </Slider>
       </div>

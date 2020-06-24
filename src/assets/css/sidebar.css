@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .filter .bm-burger-button {
   position: relative;
   width: 92%;
@@ -38,9 +45,15 @@
 }
 
 .filter_menu .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   border-bottom: 1px solid #efefef;
   font-weight: bold;
@@ -66,6 +79,8 @@
   position: absolute;
   top: 0;
   right: 0;
+  -webkit-transition: ease-in-out;
+  -o-transition: ease-in-out;
   transition: ease-in-out;
 }
 
@@ -240,32 +255,49 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .categories-menu__link_main {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
   -webkit-box-flex: 1;
-  flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   -webkit-box-align: center;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .down_icon_btn {
+  -webkit-transition: 20ms;
+  -o-transition: 20ms;
   transition: 20ms;
   position: relative;
   float: right;
   margin-top: 6px;
-  transform: rotate(-177deg);
+  -webkit-transform: rotate(-177deg);
+      -ms-transform: rotate(-177deg);
+          transform: rotate(-177deg);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .icon_rotated {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .categories-menu__submenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 20px;
 }
 
@@ -278,7 +310,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   overflow: hidden;
   white-space: nowrap;
   text-transform: capitalize !important;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .my_accordion_btn_cont {
@@ -286,8 +319,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .menu-tabs {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   margin-bottom: 24px;
   border-bottom: none !important;
@@ -343,12 +380,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .arrow_right {
   -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 
 .arrow_left {
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
   margin-left: 10px !important;
 }
 
@@ -406,7 +445,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .colors_row .d_flex {
-  justify-content: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .colors_row .color {
@@ -447,9 +488,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .profile_page .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profile_page .cart img {
@@ -495,9 +543,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .profile_page .pages ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
@@ -518,9 +572,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
   border: 2px solid #222222;
   position: relative;
   width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   height: 47px;
 }
@@ -553,11 +613,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .orders_page .empty_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px;
 }
 
@@ -635,7 +704,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .orders_page .cart_main {
   padding: 20px 0px;
-  justify-content: start !important;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: start !important;
 }
 
 .orders_page .cart_main img {
@@ -782,17 +853,32 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 30px;
   text-align: center;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 8px;
 }
 
 .wished .product_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 12px;
 }
 
@@ -816,12 +902,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .wished .item_top .d_flex {
-  justify-content: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   padding: 5px;
 }
 
 .wished .item_bottom .d_flex {
-  justify-content: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   padding: 10px 0px;
 }
 
@@ -836,7 +926,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .wished .item_bottom .old {
   font-size: 13px;
   line-height: 16px;
-  text-decoration-line: line-through;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
   color: #000000;
   opacity: 0.5;
 }
@@ -849,7 +940,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   white-space: nowrap;
   width: 180px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .wished .item_bottom .brand {
@@ -889,8 +981,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: calc(2rem - 4px);
   background-color: #222222;
   border-radius: 1.5rem;
+  -webkit-transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
 .settings .custom-switch .custom-control-label::before {
@@ -914,7 +1014,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .custom-control-input:checked
   ~ .custom-control-label::after {
   background-color: #fff;
-  transform: translateX(1.75rem);
+  -webkit-transform: translateX(1.75rem);
+      -ms-transform: translateX(1.75rem);
+          transform: translateX(1.75rem);
 }
 
 .settings {
@@ -939,7 +1041,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .settings li {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   border-bottom: 1px solid #efefef;
   padding: 10px 0px;
 }
@@ -961,6 +1065,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .slide_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 80%;
   overflow: scroll;
@@ -990,6 +1096,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .category_slider_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: scroll;
 }
@@ -1057,8 +1165,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .cart-container .profile_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cart-container .profile_child .remove {
@@ -1089,7 +1201,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .cart-container .product {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .cart-container .title_row .title .brand {
@@ -1140,9 +1254,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .total_row {
   border-top: 5px solid #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   padding: 20px;
 }
@@ -1203,10 +1324,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-align: center;
   margin: 20px;
   padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .clock_row .title {
@@ -1232,6 +1362,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .dostavka .type_order {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px solid lightgray;
   border-radius: 3px;
@@ -1344,9 +1476,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .payment ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #eeeef0;
   padding: 20px 0px;
   width: 100%;
@@ -1363,8 +1501,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .payment .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .payment .total .t {
@@ -1402,7 +1544,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .header-bottom .search {
   background: #efefef;
   border-radius: 8px;
-  padding: 5px;
 }
 
 .header-bottom .search img {
@@ -1418,7 +1559,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .header-bottom {
   border-top: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 input {
@@ -1445,5 +1587,12 @@ input {
 .index_page .nav {
   padding-top: 10px;
   padding-bottom: 20px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-tabs .active {
+  position: relative;
+  bottom: -1px;
 }

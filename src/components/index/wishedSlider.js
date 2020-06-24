@@ -54,9 +54,9 @@ const Product = ({ product }) => {
         <div className="cc-content">
           <div className="row">
             <div className="col-sm-7">
-              <a href="#" className="cc-title">
+              <div href="#" className="cc-title">
                 Zara
-              </a>
+              </div>
               <div className="cc-category">
                 <a href="#">{product.title}</a>
               </div>

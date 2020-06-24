@@ -1015,16 +1015,25 @@ ul.list-unstyled li {
 .cc-content .cc-title {
   font-size: 18px;
   font-weight: 700;
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cc-category {
   font-family: HelveticaCyr, sans-serif;
   font-weight: 400;
   font-size: 15px;
+  white-space: nowrap;
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cc-category a {
   color: #000;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
+
 .cc-price {
   text-align: right;
   font-family: HelveticaCyr, sans-serif;

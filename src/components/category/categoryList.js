@@ -24,14 +24,14 @@ const Item = ({ product }) => {
             <i className="fa fa-heart-o" aria-hidden="true"></i>
           </a>
           <a href="#" className="cc-image">
-            <LazyLoadImage  src={img} alt="" />
+            <LazyLoadImage src={img} alt="" />
           </a>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
-                <a href="#" className="cc-title">
+                <div href="#" className="cc-title">
                   {product.name}
-                </a>
+                </div>
                 <div className="cc-category">
                   <a href="#"></a>
                 </div>

@@ -11,7 +11,6 @@ export default class PoductSlider extends Component {
       slidesToShow: 2,
       slidesToScroll: 2,
       lazyLoad: true,
-      
     };
     return (
       <div className="product_slider">

@@ -5,27 +5,30 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function WishProduct({ product }) {
   return (
-    <div key={Math.random()} className="item" style={{ marginRight: "33px" }}>
+    <div key={Math.random()} className="item" style={{ margin: " 0px 10px" }}>
       <Link to={`/single/${product.id}`}>
         <div className="cc-block">
           <a href="#" className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
           </a>
           <a href="#" className="cc-image">
-            <LazyLoadImage  src={img} alt="" />
+            <LazyLoadImage src={img} alt="" />
           </a>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
-                <a href="#" className="cc-title">
+                <div href="#" className="cc-title">
                   Zara
-                </a>
+                </div>
                 <div className="cc-category">
-                  <a href="#">{product.meta_title}</a>
+                  <div href="#">{product.meta_title}</div>
                 </div>
               </div>
               <div className="col-sm-5">
-                <div className="cc-price bold" style={{ textAlign: "initial" }}>
+                <div
+                  className="cc-price bold"
+                  style={{ textAlign: "initial", fontWeight: "normal" }}
+                >
                   {product.price} €
                 </div>
               </div>
