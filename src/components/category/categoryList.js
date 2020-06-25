@@ -23,22 +23,20 @@ const Item = ({ product }) => {
           <a href="#1" className="wish-icon">
             <i className="fa fa-heart-o" aria-hidden="true"></i>
           </a>
-          <a href="#" className="cc-image">
-            <LazyLoadImage src={img} alt="" />
+          <a href="#" className="cc-image" style={{ marginBottom: "10px" }}>
+            <LazyLoadImage src={product.image} alt="" />
           </a>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
                 <div href="#" className="cc-title">
-                  {product.name}
+                  {product.brand}
                 </div>
-                <div className="cc-category">
-                  <a href="#"></a>
-                </div>
+                <div className="cc-category"> {product.name}</div>
               </div>
               <div className="col-sm-5">
                 <div className="cc-price" style={{ textAlign: "initial" }}>
-                  {product.price}
+                  {product.price} USD
                 </div>
               </div>
             </div>

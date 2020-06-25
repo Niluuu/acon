@@ -9,7 +9,7 @@
   position: relative;
   width: 92%;
   height: 41px;
-  top: 275px;
+  top: 62px;
   float: right;
   left: -17px !important;
   opacity: 0;
@@ -148,7 +148,7 @@
   background: #222222;
   color: #fff;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   border: none;
   height: 43px;
@@ -1625,3 +1625,5 @@ input {
 .categories-menu li span {
   line-height: initial !important;
 }
+
+

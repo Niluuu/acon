@@ -6,9 +6,9 @@ import Spinner from "react-bootstrap/Spinner";
 import black from "../../assets/images/order/black-arrow.png";
 import remove from "../../assets/images/order/black-arrow.png";
 import loop from "../../assets/images/order/search.png";
-import check from "../../assets/images/order/check.png";
 import back from "../../assets/images/order/back.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import FilterBrands from "./filterBrands";
 
 const menu = [
   { name: "БРЕНД" },
@@ -18,10 +18,10 @@ const menu = [
   { name: "ЦВЕТ" },
 ];
 const radio = [
-  { name: "ПО ПОПУЛЯРНОСТИ" },
-  { name: "ПО ВОЗРАСТАНИЮ ЦЕНЫ" },
-  { name: "ПО УБЫВАНИЮ ЦЕНЫ" },
-  { name: "НО НОВИЗНЕ" },
+  { name: "ПО ПОПУЛЯРНОСТИ", id: "1" },
+  { name: "ПО ВОЗРАСТАНИЮ ЦЕНЫ", id: "2" },
+  { name: "ПО УБЫВАНИЮ ЦЕНЫ", id: "3" },
+  { name: "НО НОВИЗНЕ", id: "4" },
 ];
 
 class FilterMenu extends Component {
@@ -30,6 +30,9 @@ class FilterMenu extends Component {
     this.state = {
       menuOpen: false,
       menuSearch: false,
+      allowed: ["brands"],
+      filterBrands: [],
+      sort: "1",
     };
   }
 
@@ -53,16 +56,29 @@ class FilterMenu extends Component {
     this.setState((state) => ({ menuOpen: !state.menuOpen }));
   }
 
-  handleOpen() {
-    this.setState({ menuSearch: true });
-  }
-
   back() {
     this.setState({ menuSearch: false });
   }
 
+  sort(e) {
+    this.setState({ sort: e.target.value });
+  }
+
+  open(e) {
+    this.setState({ menuSearch: true });
+    const allowed = [e.target.name];
+
+    const filtered = Object.keys(this.props.filter)
+      .filter((key) => allowed.includes(key))
+      .reduce((obj, key) => {
+        obj[key] = this.props.filter[key];
+        return obj;
+      }, {});
+    this.setState({ filterBrands: filtered });
+  }
+
   render() {
-    const { loading } = this.props;
+    const { filter } = this.props;
 
     return (
       <div className="filter">
@@ -75,26 +91,39 @@ class FilterMenu extends Component {
             <p className="top_title">ФИЛЬТРЫ</p>
             <p className="title">ФИЛЬТРОВАТЬ</p>
             <ul>
-              {menu.map(({ name }) => {
-                return (
-                  <li key={Math.random()} onClick={(e) => this.handleOpen(e)}>
-                    <div className="list">
-                      <span>{name}</span>
-                      <LazyLoadImage  src={black} alt="" />{" "}
-                    </div>
-                  </li>
-                );
-              })}
+              {filter &&
+                Object.keys(filter).map((f, index) => {
+                  return (
+                    <li key={Math.random()}>
+                      <label className="list">
+                        <input
+                          name={f}
+                          onClick={(e) => this.open(e)}
+                          type="checkbox"
+                          checked={this.state.open === index}
+                          style={{ display: "none" }}
+                        />
+                        <span style={{ textTransform: "capitalize" }}>{f}</span>
+                        <LazyLoadImage src={black} alt="" />{" "}
+                      </label>
+                    </li>
+                  );
+                })}
             </ul>
             <p className="title">СОРТИРОВАТЬ</p>
             <ul>
-              {radio.map(({ name }) => {
+              {radio.map(({ name, id }) => {
                 return (
                   <li key={Math.random()}>
-                    <div className="list">
+                    <label className="list">
                       <span>{name}</span>
-                      <input type="radio" value={name} />
-                    </div>
+                      <input
+                        type="radio"
+                        value={id}
+                        checked={this.state.sort === id}
+                        onClick={(e) => this.sort(e)}
+                      />
+                    </label>
                   </li>
                 );
               })}
@@ -105,34 +134,28 @@ class FilterMenu extends Component {
               className={
                 this.state.menuSearch ? "filter_search open" : "filter_search"
               }
+              style={{ overflow: "scroll" }}
             >
               <div className="name_row">
-                <LazyLoadImage 
+                <LazyLoadImage
                   src={back}
                   className="remove"
                   onClick={() => this.back()}
                   alt=""
                 />
-                <p className="top_title">БРЕНДЫ</p>
+                <p className="top_title">
+                  {this.state.filterBrands &&
+                    Object.keys(this.state.filterBrands)[0]}
+                </p>
               </div>
               <div className="search_row">
-                <LazyLoadImage  src={loop} className="loop" alt="" />
+                <LazyLoadImage src={loop} className="loop" alt="" />
                 <input type="text" placeholder="Поиск" />
               </div>
-              <ul>
-                {menu.map(({ name }) => {
-                  return (
-                    <li key={Math.random()}>
-                      <div className="list">
-                        <span>{name}</span>
-                        <LazyLoadImage  src={check} alt="" />{" "}
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-
-              <button className="under_btn">ПРИМЕНИТЬ</button>
+              <FilterBrands filter={this.state.filterBrands} />
+              <button onClick={() => this.closeMenu()} className="under_btn">
+                ПРИМЕНИТЬ
+              </button>
             </div>
           </div>
         </Menu>
@@ -142,9 +165,9 @@ class FilterMenu extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  items: state.menuReducer.menuItems,
-  loading: state.menuReducer.loading,
-  error: state.menuReducer.error,
+  // items: state.menuReducer.menuItems,
+  // loading: state.menuReducer.loading,
+  // error: state.menuReducer.error,
 });
 
 export default connect(mapStateToProps)(FilterMenu);

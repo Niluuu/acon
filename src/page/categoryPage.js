@@ -16,15 +16,13 @@ class CategoryPage extends Component {
     const { category } = this.props;
     return (
       <section id="content" className="filter-container">
-        <FilterMenu />
+        <FilterMenu filter={category.filter} />
         {category && category.products && category.products.data && (
           <div className="category-container">
             <div className="container">
               <div className="row">
                 <div className="col-sm-10">
                   <div className="category-block">
-                    <h1>Damenbekleidung</h1>
-                    <Banner />
                     <Filter />
                     <CategoryList items={category.products.data} />
                   </div>
