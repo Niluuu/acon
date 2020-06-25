@@ -15,9 +15,10 @@ function CustomToggle({ children, eventKey }) {
           ? "my_accordion_btn_cont border-none"
           : "my_accordion_btn_cont"
       }
+      style={{ display: "flex" }}
     >
       {children}
-      <span class="icon-arrow">
+      <div class="icon-arrow">
         <span
           className={
             isCurrentEventKey && accordionIsExpanded
@@ -32,7 +33,7 @@ function CustomToggle({ children, eventKey }) {
               : "arrow_right rotated_right"
           }
         ></span>
-      </span>
+      </div>
     </div>
   );
 }

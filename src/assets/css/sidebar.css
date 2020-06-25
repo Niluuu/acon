@@ -49,11 +49,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px solid #efefef;
   font-weight: bold;
@@ -260,13 +260,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
-      flex-grow: 1;
+  flex-grow: 1;
   -webkit-box-align: center;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
 }
 
 .down_icon_btn {
@@ -277,8 +277,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   float: right;
   margin-top: 6px;
   -webkit-transform: rotate(-177deg);
-      -ms-transform: rotate(-177deg);
-          transform: rotate(-177deg);
+  -ms-transform: rotate(-177deg);
+  transform: rotate(-177deg);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -286,8 +286,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .icon_rotated {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .categories-menu__submenu {
@@ -296,8 +296,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-left: 20px;
 }
 
@@ -311,7 +311,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   white-space: nowrap;
   text-transform: capitalize !important;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .my_accordion_btn_cont {
@@ -323,8 +323,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox !important;
   display: flex !important;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
   margin-bottom: 24px;
   border-bottom: none !important;
@@ -381,13 +381,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .arrow_right {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .arrow_left {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+  transform: rotate(45deg);
   margin-left: 10px !important;
 }
 
@@ -446,8 +446,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .colors_row .d_flex {
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .colors_row .color {
@@ -493,11 +493,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .profile_page .cart img {
@@ -547,11 +547,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
@@ -576,11 +576,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-transform: uppercase;
   height: 47px;
 }
@@ -617,16 +617,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 20px;
 }
 
@@ -705,8 +705,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .orders_page .cart_main {
   padding: 20px 0px;
   -webkit-box-pack: start !important;
-      -ms-flex-pack: start !important;
-          justify-content: start !important;
+  -ms-flex-pack: start !important;
+  justify-content: start !important;
 }
 
 .orders_page .cart_main img {
@@ -857,11 +857,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: 8px;
 }
 
@@ -871,14 +871,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-left: 12px;
 }
 
@@ -903,15 +903,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .wished .item_top .d_flex {
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   padding: 5px;
 }
 
 .wished .item_bottom .d_flex {
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   padding: 10px 0px;
 }
 
@@ -927,7 +927,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   font-size: 13px;
   line-height: 16px;
   -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
   color: #000000;
   opacity: 0.5;
 }
@@ -941,7 +941,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 180px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .wished .item_bottom .brand {
@@ -982,15 +982,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: #222222;
   border-radius: 1.5rem;
   -webkit-transition: background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
 .settings .custom-switch .custom-control-label::before {
@@ -1015,8 +1017,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   ~ .custom-control-label::after {
   background-color: #fff;
   -webkit-transform: translateX(1.75rem);
-      -ms-transform: translateX(1.75rem);
-          transform: translateX(1.75rem);
+  -ms-transform: translateX(1.75rem);
+  transform: translateX(1.75rem);
 }
 
 .settings {
@@ -1042,8 +1044,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .settings li {
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   border-bottom: 1px solid #efefef;
   padding: 10px 0px;
 }
@@ -1169,8 +1171,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .cart-container .profile_child .remove {
@@ -1202,8 +1204,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .cart-container .product {
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .cart-container .title_row .title .brand {
@@ -1258,12 +1260,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   padding: 20px;
 }
@@ -1328,15 +1330,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .clock_row .title {
@@ -1480,11 +1482,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-bottom: 1px solid #eeeef0;
   padding: 20px 0px;
   width: 100%;
@@ -1505,8 +1507,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .payment .total .t {
@@ -1560,7 +1562,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .header-bottom {
   border-top: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 input {
@@ -1588,11 +1590,38 @@ input {
   padding-top: 10px;
   padding-bottom: 20px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .nav-tabs .active {
   position: relative;
   bottom: -1px;
+}
+
+.icon-arrow {
+  position: relative;
+}
+
+/* .tab-content .categories-menu .my_accordion_btn_cont {
+  display: flex;
+} */
+
+.categories-menu .under-categorys li {
+  text-transform: initial;
+  white-space: nowrap;
+  width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.categories-menu .under-categorys li a span {
+  font-weight: normal !important;
+}
+.categories-menu .under-categorys {
+  padding: 10px 0px 10px 30px;
+}
+
+.categories-menu li span {
+  line-height: initial !important;
 }

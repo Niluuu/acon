@@ -6,6 +6,8 @@ import { fetchProducts } from "../../redux/menu/action";
 import { connect } from "react-redux";
 import Spinner from "react-bootstrap/Spinner";
 import { Link } from "react-router-dom";
+import Accordion from "react-bootstrap/Accordion";
+import CustomToggle from "./custumToogle";
 
 class Sidebar extends Component {
   constructor(props) {
@@ -53,7 +55,49 @@ class Sidebar extends Component {
                 eventKey={item.id}
                 title={item.meta_title}
               >
-                {!loading && (
+                <Accordion defaultActiveKey="1">
+                  <ul className="categories-menu">
+                    {item.children &&
+                      item.children.map(({ name, id, children }) => {
+                        return (
+                          <li key={Math.random()}>
+                            {children.length > 0 ? (
+                              <React.Fragment>
+                                <CustomToggle key={Math.random()} eventKey={id}>
+                                  {name}
+                                </CustomToggle>
+                                <Accordion.Collapse eventKey={id}>
+                                  <ul className="under-categorys">
+                                    {children &&
+                                      children.map(({ name }) => {
+                                        return (
+                                          <li>
+                                            <Link to="/category">
+                                              <span
+                                                onClick={() => this.closeMenu()}
+                                              >
+                                                {name}
+                                              </span>
+                                            </Link>
+                                          </li>
+                                        );
+                                      })}
+                                  </ul>
+                                </Accordion.Collapse>
+                              </React.Fragment>
+                            ) : (
+                              <Link to="/category">
+                                <span onClick={() => this.closeMenu()}>
+                                  {name}
+                                </span>
+                              </Link>
+                            )}
+                          </li>
+                        );
+                      })}
+                  </ul>
+                </Accordion>
+                {/* {!loading && (
                   <ul className="categories-menu">
                     {item.children &&
                       item.children.map(({ name, id }) => {
@@ -68,7 +112,7 @@ class Sidebar extends Component {
                         );
                       })}
                   </ul>
-                )}
+                )} */}
               </Tab>
             );
           })}
