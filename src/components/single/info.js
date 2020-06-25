@@ -9,9 +9,7 @@ function Info({ product }) {
       <div className="flex_just_bet info_single">
         <div className="info_product">
           <p className="category">
-            {product.product &&
-              product.product.brand &&
-              product.product.brand.name}
+            {product.product && product.product.brand && product.product.brand}
           </p>
           <h1 className="name">{product.product && product.product.name}</h1>
           <p className="price">

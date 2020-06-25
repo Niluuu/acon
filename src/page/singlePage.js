@@ -9,6 +9,7 @@ import { fetchSingle } from "../redux/singlePage/action";
 import { addCart } from "../redux/cartPage/addCart/action";
 import Colors from "../components/single/colors";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Size from "../components/single/size";
 
 class SinglePage extends React.Component {
   componentDidMount() {
@@ -35,15 +36,16 @@ class SinglePage extends React.Component {
           <div className="top-single-container mb-45px">
             <SimpleSlider product={data} />
             <Info product={data} />
-            <Colors />
+            <Size product={data.product.attribute_combination.size} />
+            <Colors product={data.product.attribute_combination.color} />
             <button
               className="add_to_cart"
               onClick={() => this.handleClick(data.product.id)}
             >
-              <LazyLoadImage  src={img} alt="" /> добавить В корзину
+              <LazyLoadImage src={img} alt="" /> добавить В корзину
             </button>
-            <Description product={data} />
-            <ProductSlider products={data.similarByBrand} />
+            <Description product={data.product} />
+            <ProductSlider products={data.similar_by_brand} />
           </div>
         )}
       </section>

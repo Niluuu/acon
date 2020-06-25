@@ -1074,7 +1074,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   overflow: scroll;
   position: relative;
   float: right;
-  top: -92px;
+  top: -55px;
   height: 100%;
 }
 
@@ -1626,4 +1626,10 @@ input {
   line-height: initial !important;
 }
 
+.single-tabs .nav {
+  border: none !important;
+}
 
+.single-tabs .nav .active {
+  border-bottom: 2px solid #222222 !important;
+}

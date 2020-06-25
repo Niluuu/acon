@@ -16,7 +16,7 @@ const colors = [
   { color: "#2843A2" },
 ];
 
-function Colors() {
+function Colors({ product }) {
   const [state, setState] = useState("#222222");
   function handleOptionChange(e) {
     setState(e.target.value);
@@ -25,21 +25,25 @@ function Colors() {
     <div className="colors_row">
       <div className="title">ЦвЕТ</div>
       <div className="d_flex">
-        {colors.map((c) => {
-          return (
-            <div
-              className={state === c.color ? "radio_row  checked" : "radio_row"}
-            >
-              <input
-                type="radio"
-                value={c.color}
-                checked={state === c.color}
-                onChange={(e) => handleOptionChange(e)}
-              />
-              <div className="color" style={{ background: c.color }}></div>
-            </div>
-          );
-        })}
+        {product &&
+          product.values &&
+          product.values.map((c) => {
+            return (
+              <div
+                className={
+                  state === c.color ? "radio_row  checked" : "radio_row"
+                }
+              >
+                <input
+                  type="radio"
+                  value={c.color}
+                  checked={state === c.color}
+                  onChange={(e) => handleOptionChange(e)}
+                />
+                <div className="color" style={{ background: c.color }}></div>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

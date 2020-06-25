@@ -44,20 +44,24 @@ function Description({ product }) {
               <p>Италия</p>
             </div>
           </div>
-          <div className="info_row">
-            <div className="info">
-              <p className="light text-capitalize">Материал</p>
-              <p>Джерси</p>
+          {product && product.features && (
+            <div className="info_row">
+              <div className="info">
+                <p className="light text-capitalize">Материал</p>
+                {/* <p>{product.features.composition}</p> */}
+              </div>
+              <div className="info">
+                <p className="light text-capitalize">Уход</p>
+                <p>Ручная стирка</p>
+              </div>
             </div>
-            <div className="info">
-              <p className="light text-capitalize">Уход</p>
-              <p>Ручная стирка</p>
-            </div>
-          </div>
+          )}
         </div>
       </div>
       <div className="categorys border_top border_bottom ">
-        <CategorySlider />
+        {product && product.related && (
+          <CategorySlider product={product.related} />
+        )}
       </div>
       <div className="categorys faq_row flex_just_bet">
         <h2>Остались вопросы?</h2>
@@ -68,7 +72,7 @@ function Description({ product }) {
         </button>
       </div>
       <div className="categorys border_top flex_just_bet">
-        <Tabs product={product} />
+        {product && <Tabs product={product} />}
       </div>
     </div>
   );

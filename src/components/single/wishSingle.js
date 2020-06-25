@@ -12,24 +12,22 @@ function WishProduct({ product }) {
             <i className="fa fa-heart-o" aria-hidden="true"></i>
           </a>
           <a href="#" className="cc-image">
-            <LazyLoadImage src={img} alt="" />
+            <LazyLoadImage src={product.image} alt="" />
           </a>
           <div className="cc-content">
             <div className="row">
               <div className="col-sm-7">
                 <div href="#" className="cc-title">
-                  Zara
+                  {product.brand}
                 </div>
-                <div className="cc-category">
-                  <div href="#">{product.meta_title}</div>
-                </div>
+                <div className="cc-category">{product.name}</div>
               </div>
               <div className="col-sm-5">
                 <div
                   className="cc-price bold"
                   style={{ textAlign: "initial", fontWeight: "normal" }}
                 >
-                  {product.price} €
+                  {product.price} USD
                 </div>
               </div>
             </div>

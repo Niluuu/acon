@@ -3,10 +3,12 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
 function TabsRow({ product }) {
+  console.log(product);
   const [key, setKey] = useState("Описание");
   return (
     <div className="single-tabs border-bottom ">
       <Tabs
+        style={{ borderBottom: "none" }}
         id="controlled-tab-example"
         activeKey={key}
         style={{ display: "flex" }}
@@ -16,10 +18,10 @@ function TabsRow({ product }) {
           <div>
             <p className="title">Материал и инструкции по уходу</p>
             <p className="light">Материал</p>
-            <p>80% хлопок, 20% полиэстер</p>
+            <p>{product.features && product.features.composition}</p>
             <br />
             <p className="light">Уход</p>
-            <p>{product.description}</p>
+            <p>{product.features && product.features.care}</p>
             <br />
             <p className="light">ПОсадка</p>
             <p>Высокая</p>
