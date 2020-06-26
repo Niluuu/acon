@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
-function TabsRow({ product }) {
-  console.log(product);
-  const [key, setKey] = useState("Описание");
+function TabsRow({ product, data }) {  const [key, setKey] = useState("Описание");
+  const specs = product.specs && Object.keys(product.specs);
   return (
     <div className="single-tabs border-bottom ">
       <Tabs
@@ -23,24 +22,43 @@ function TabsRow({ product }) {
             <p className="light">Уход</p>
             <p>{product.features && product.features.care}</p>
             <br />
-            <p className="light">ПОсадка</p>
-            <p>Высокая</p>
-            <br /> <p className="light">Корманы</p>
-            <p>Принт</p>
-            <br /> <p className="light">Выкройка</p>
-            <p>Боковые карманы</p>
-            <br />
-            <p className="light">Детали</p>
-            <p>Высокая</p>
-            <br /> <p className="light">Артикул</p>
-            <p>Принт</p>
+            {product.specs && (
+              <React.Fragment>
+                <br /> <p className="light">{specs[0]}</p>
+                <p>{product.specs.Детали[0]}</p>
+                <br /> <p className="light">{specs[1]}</p>
+                <p>{product.specs.Корманы[0]}</p>
+                <br />
+                <p className="light">{specs[2]}</p>
+                <p>{product.specs.Посадка[0]}</p>
+              </React.Fragment>
+            )}
           </div>
         </Tab>
         <Tab eventKey="Размеры" title="Размеры">
-          <div>...</div>
+          <div>
+            {product &&
+              product.attribute_combination &&
+              product.attribute_combination.size &&
+              product.attribute_combination.size.values.map((s) => {
+                return <p>{s.name}</p>;
+              })}
+          </div>
         </Tab>
         <Tab eventKey="Доставка" title="Доставка">
-          <div>...</div>
+          <div>
+            {data &&
+              data.delivery.map((d) => {
+                return (
+                  <div>
+                    <p className="light">{d.name}</p>
+                    <p>{d.transit_time}</p>
+                    <p>{d.price} USD</p>
+                    <br />
+                  </div>
+                );
+              })}
+          </div>
         </Tab>
       </Tabs>
     </div>

@@ -12,6 +12,7 @@ class Form extends Component {
     question: "",
   };
   componentDidMount() {
+    window.scrollTo(0, 0);
     // this.props.dispatch(fetchFunc(89));
   }
 
@@ -62,7 +63,7 @@ class Form extends Component {
           />
           <br />
           <button className="under_btn">
-            ЗАДАТЬ ВОПРОС <LazyLoadImage  src={right} alt="" />
+            ЗАДАТЬ ВОПРОС <LazyLoadImage src={right} alt="" />
           </button>
         </div>
       </React.Fragment>

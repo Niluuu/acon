@@ -1,26 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const colors = [
-  {
-    color: "#fff",
-  },
-  {
-    color: "#A62828",
-  },
-  {
-    color: "#222222",
-  },
-  {
-    color: "#2AA469",
-  },
-  { color: "#2843A2" },
-];
-
-function Colors({ product }) {
-  const [state, setState] = useState("#222222");
+function Colors({ product, handlePrice }) {
+  const [state, setState] = useState("");
   function handleOptionChange(e) {
     setState(e.target.value);
+    handlePrice(e.target);
   }
+
+  useEffect(() => {
+    const defoult = product.values && product.values[0];
+    setState(defoult.color);
+  }, [product.values]);
+
   return (
     <div className="colors_row">
       <div className="title">ЦвЕТ</div>
@@ -35,7 +26,10 @@ function Colors({ product }) {
                 }
               >
                 <input
+                  className={c.name}
+                  name="colorPrice"
                   type="radio"
+                  id={c.price}
                   value={c.color}
                   checked={state === c.color}
                   onChange={(e) => handleOptionChange(e)}

@@ -442,6 +442,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .colors_row {
   padding-bottom: 30px;
+  height: 110px;
 }
 
 .colors_row .d_flex {
@@ -1071,7 +1072,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: -ms-flexbox;
   display: flex;
   width: 80%;
-  overflow: scroll;
+  overflow-y: scroll;
   position: relative;
   float: right;
   top: -55px;

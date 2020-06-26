@@ -7,7 +7,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class SimpleSlider extends Component {
   render() {
-    console.log(this.props);
     const settings = {
       dots: true,
       infinite: true,

@@ -1,5 +1,4 @@
 import React from "react";
-import HeaderSlider from "./headerSlider";
 import CatalogSlider from "./catalogSlider";
 import NameWithLink from "../index/nameWithLink";
 import img from "../../assets/images/tmp/p1.jpg";
@@ -7,8 +6,6 @@ import WishedSlider from "./wishedSlider";
 import SimpleProduct from "../common/simpleProduct";
 import Sale from "./sale";
 import Product from "../common/product";
-import BottomBlock from "./bottomBlock";
-import Descrition from "./descrition";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import HeaderBottom from "./headerBottom";
@@ -21,9 +18,6 @@ class Content extends React.Component {
     return (
       <div className="content index_page">
         <HeaderBottom />
-        {/* <div className="top-block mb-50px">
-          <HeaderSlider />
-        </div> */}
         <Tabs defaultActiveKey="женщинам" id="controlled-tab-example">
           <Tab eventKey="женщинам" title="женщинам">
             <div className="container">
@@ -65,12 +59,6 @@ class Content extends React.Component {
               <div className="block-container mb-65px">
                 <NameWithLink name={"Сникерсы"} link={"#"} />
                 <WishedSlider />
-              </div>
-              <div className="block-container mb-65px">
-                <BottomBlock />
-              </div>
-              <div className="block-container mb-65px">
-                <Descrition />
               </div>
             </div>
           </Tab>
@@ -115,12 +103,6 @@ class Content extends React.Component {
                 <NameWithLink name={"Сникерсы"} link={"#"} />
                 <WishedSlider />
               </div>
-              <div className="block-container mb-65px">
-                <BottomBlock />
-              </div>
-              <div className="block-container mb-65px">
-                <Descrition />
-              </div>
             </div>
           </Tab>
           <Tab eventKey="ДЕТЯМ" title="ДЕТЯМ">
@@ -164,12 +146,6 @@ class Content extends React.Component {
                 <NameWithLink name={"Сникерсы"} link={"#"} />
                 <WishedSlider />
               </div>
-              <div className="block-container mb-65px">
-                <BottomBlock />
-              </div>
-              <div className="block-container mb-65px">
-                <Descrition />
-              </div>
             </div>
           </Tab>
           <Tab eventKey="БРЕНДЫ" title="БРЕНДЫ">
@@ -212,12 +188,6 @@ class Content extends React.Component {
               <div className="block-container mb-65px">
                 <NameWithLink name={"Сникерсы"} link={"#"} />
                 <WishedSlider />
-              </div>
-              <div className="block-container mb-65px">
-                <BottomBlock />
-              </div>
-              <div className="block-container mb-65px">
-                <Descrition />
               </div>
             </div>
           </Tab>

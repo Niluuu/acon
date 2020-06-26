@@ -1,15 +1,17 @@
-import React, { Component, useState } from "react";
-import Slider from "react-slick";
+import React, { useState, useEffect } from "react";
 
-const sizes = ["34", "35", "36", "37", "38", "39"];
-
-export default function Size({ product }) {
-  const [state, setState] = useState("36");
+export default function Size({ product, handlePrice }) {
+  const [state, setState] = useState("");
   function handleOptionChange(e) {
     setState(e.target.value);
+    handlePrice(e.target);
   }
 
-  // console.log("size", product);
+  useEffect(() => {
+    const defoult = product.values && product.values[0];
+    setState(defoult.name);
+  });
+
   return (
     <div className="size_slider">
       <div className="price_type">
@@ -22,6 +24,8 @@ export default function Size({ product }) {
             return (
               <div className="sizes" key={Math.random()}>
                 <input
+                  name="sizePrice"
+                  id={s.price}
                   type="radio"
                   value={s.name}
                   checked={state === s.name}
