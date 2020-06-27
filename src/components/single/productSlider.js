@@ -14,7 +14,10 @@ export default class PoductSlider extends Component {
     };
     return (
       <div className="product_slider">
-        <h2 className="title"> Смотрите так же </h2>
+        <h2 className="title" style={{ marginBottom: 0 }}>
+          {" "}
+          Смотрите так же{" "}
+        </h2>
         <Slider {...settings}>
           {this.props.products &&
             this.props.products.map((product) => {

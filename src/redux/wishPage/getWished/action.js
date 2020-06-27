@@ -1,4 +1,6 @@
-export function fetchHome() {
+import axios from "axios";
+
+export function getWished() {
   const uid = Math.random();
   const localId = window.localStorage.getItem("uid");
 
@@ -7,8 +9,8 @@ export function fetchHome() {
   }
 
   return (dispatch) => {
-    dispatch(fetchHomeBegin());
-    return fetch(`https://dev.mod.uz/mdapi/v1`, {
+    dispatch(getWishedBegin());
+    return fetch("https://dev.mod.uz/mdapi/v1/favorites", {
       headers: {
         "X-VISITOR-UID": window.localStorage.getItem("uid"),
         Accept: "application/json",
@@ -18,10 +20,10 @@ export function fetchHome() {
       .then(handleErrors)
       .then((res) => res.json())
       .then((json) => {
-        dispatch(fetchHomeSuccess(json));
+        dispatch(getWishedSuccess(json));
         return json;
       })
-      .catch((error) => dispatch(fetchHomeFailure(error)));
+      .catch((error) => dispatch(getWishedFailure(error)));
   };
 }
 
@@ -32,20 +34,20 @@ function handleErrors(response) {
   return response;
 }
 
-export const FETCH_HOME_BEGIN = "FETCH_HOME_BEGIN";
-export const FETCH_HOME_SUCCESS = "FETCH_HOME_SUCCESS";
-export const FETCH_HOME_FAILURE = "FETCH_HOME_FAILURE";
+export const GET_WISHED_BEGIN = "GET_WISHED_BEGIN";
+export const GET_WISHED_SUCCESS = "GET_WISHED_SUCCESS";
+export const GET_WISHED_FAILURE = "GET_WISHED_FAILURE";
 
-export const fetchHomeBegin = () => ({
-  type: FETCH_HOME_BEGIN,
+export const getWishedBegin = () => ({
+  type: GET_WISHED_BEGIN,
 });
 
-export const fetchHomeSuccess = (products) => ({
-  type: FETCH_HOME_SUCCESS,
+export const getWishedSuccess = (products) => ({
+  type: GET_WISHED_SUCCESS,
   payload: { products },
 });
 
-export const fetchHomeFailure = (error) => ({
-  type: FETCH_HOME_FAILURE,
+export const getWishedFailure = (error) => ({
+  type: GET_WISHED_FAILURE,
   payload: { error },
 });

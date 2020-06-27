@@ -4,8 +4,13 @@ import img from "../../assets/images/tmp/c4.jpg";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { toggleWished } from "../../redux/wishPage/addWished/action";
 
 class WishedSlider extends Component {
+  wished = (id) => {
+    this.props.dispatch(toggleWished(id));
+  };
+
   render() {
     const settings = {
       dots: true,
@@ -23,6 +28,9 @@ class WishedSlider extends Component {
             data.items.map((p) => {
               return (
                 <div key={Math.random()}>
+                  <span className="wish-icon" onClick={() => this.wished(p.id)}>
+                    <i className="fa fa-heart-o" aria-hidden="true"></i>
+                  </span>
                   <Link to={`/single/${p.id}`}>
                     <Product product={p} />
                   </Link>
@@ -45,25 +53,22 @@ const Product = ({ product }) => {
   return (
     <div className="item" style={{ margin: "15px 10px" }}>
       <div className="cc-block">
-        <a href="#" className="wish-icon">
-          <i className="fa fa-heart-o" aria-hidden="true"></i>
-        </a>
-        <a href="#" className="cc-image">
+        <div href="#" className="cc-image">
           <LazyLoadImage src={img} alt="" />
-        </a>
+        </div>
         <div className="cc-content">
           <div className="row">
             <div className="col-sm-7">
               <div href="#" className="cc-title">
-                Zara
+                {product.name}
               </div>
               <div className="cc-category">
-                <a href="#">{product.title}</a>
+                <div href="#">{product.title}</div>
               </div>
             </div>
             <div className="col-sm-5">
               <div className="cc-price" style={{ textAlign: "initial" }}>
-                204,95 €
+                {product.price}
               </div>
             </div>
           </div>

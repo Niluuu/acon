@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
-function TabsRow({ product, data }) {  const [key, setKey] = useState("Описание");
+function TabsRow({ product, data }) {
+  const [key, setKey] = useState("Описание");
   const specs = product.specs && Object.keys(product.specs);
   return (
     <div className="single-tabs border-bottom ">
@@ -22,7 +23,7 @@ function TabsRow({ product, data }) {  const [key, setKey] = useState("Опис�
             <p className="light">Уход</p>
             <p>{product.features && product.features.care}</p>
             <br />
-            {product.specs && (
+            {product.specs && product.specs[0] && (
               <React.Fragment>
                 <br /> <p className="light">{specs[0]}</p>
                 <p>{product.specs.Детали[0]}</p>

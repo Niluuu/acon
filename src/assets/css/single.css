@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 24px 9px;
 }
 
 .simple_slider .slick-dots {
@@ -33,10 +34,11 @@
 }
 
 .simple_slider .heart_icon {
-  position: relative;
-  float: right;
-  top: 32px;
-  padding-right: 15px;
+  position: absolute;
+  top: 74px;
+  right: 0;
+  padding-right: 31px;
+  z-index: 100;
 }
 
 .simple_slider .arrow_icon {
@@ -353,7 +355,7 @@
 
 .categories-menu li span {
   text-transform: capitalize !important;
-  font-weight: bold !important;
+  font-weight: normal !important;
   font-size: 16px;
   line-height: 40px;
   color: #000 !important;

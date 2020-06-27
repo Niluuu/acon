@@ -26,6 +26,7 @@ import home from "./redux/index/reducer";
 import cartGet from "./redux/cartPage/getCart/reducer";
 import order from "./redux/order/get/reducer";
 import orderPost from "./redux/order/post/reducer";
+import wished from "./redux/wishPage/getWished/reducer";
 
 const rootReducer = combineReducers({
   menuReducer: menu,
@@ -35,6 +36,7 @@ const rootReducer = combineReducers({
   cartGetReducer: cartGet,
   orderReducer: order,
   orderPostReducer: orderPost,
+  wishedReducer: wished,
 });
 
 const store = createStore(

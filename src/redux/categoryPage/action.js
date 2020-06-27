@@ -1,7 +1,19 @@
 export function fetchFunc(id) {
+   const uid = Math.random();
+   const localId = window.localStorage.getItem("uid");
+
+   if (localId === null) {
+     window.localStorage.setItem("uid", JSON.stringify(uid));
+   }
   return (dispatch) => {
     dispatch(fetchBegin());
-    return fetch(`https://dev.mod.uz/mdapi/v1/categories/${id}/products`)
+    return fetch(`https://dev.mod.uz/mdapi/v1/categories/${id}/products`, {
+      headers: {
+        "X-VISITOR-UID": window.localStorage.getItem("uid"),
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
       .then(handleErrors)
       .then((res) => res.json())
       .then((json) => {

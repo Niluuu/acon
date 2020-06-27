@@ -22,7 +22,7 @@ class Content extends React.Component {
           <Tab eventKey="женщинам" title="женщинам">
             <div className="container">
               <div className="catalog-container">
-                <h3 className="mb-35px">Каталог</h3>
+                <h3>Каталог</h3>
                 <CatalogSlider />
               </div>
               <div className="block-container mb-35px">

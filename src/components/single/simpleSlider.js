@@ -4,8 +4,14 @@ import img1 from "../../assets/images/cover.png";
 import heart from "../../assets/images/h2.png";
 import arrow from "../../assets/images/arrow.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { toggleWished } from "../../redux/wishPage/addWished/action";
+import { connect } from "react-redux";
 
-export default class SimpleSlider extends Component {
+class SimpleSlider extends Component {
+  wished = (id) => {
+    this.props.dispatch(toggleWished(id));
+  };
+
   render() {
     const settings = {
       dots: true,
@@ -21,17 +27,30 @@ export default class SimpleSlider extends Component {
         {this.props.product &&
           this.props.product.product &&
           this.props.product.product.images && (
-            <Slider {...settings}>
-              {this.props.product.product.images.map((img) => (
-                <div>
-                  <img className="heart_icon" src={heart} alt="" />
-                  <img className="cover_img" src={img} />
-                  <img className="arrow_icon" src={arrow} alt="" />
-                </div>
-              ))}
-            </Slider>
+            <React.Fragment>
+              <img
+                onClick={() => this.wished(this.props.product.product.id)}
+                className="heart_icon"
+                src={heart}
+                alt=""
+              />
+              <Slider {...settings}>
+                {this.props.product.product.images.map((img) => (
+                  <div>
+                    <img className="cover_img" src={img} />
+                    <img className="arrow_icon" src={arrow} alt="" />
+                  </div>
+                ))}
+              </Slider>
+            </React.Fragment>
           )}
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return state.homeReducer;
+};
+
+export default connect(mapStateToProps)(SimpleSlider);
