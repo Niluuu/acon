@@ -1685,15 +1685,30 @@ input {
   left: 100%;
   bottom: 0;
   right: 0;
-  width: 100%;
+  width: 0px;
   display: none;
-  transition: left 2s;
+  transition: width 4s !important;
+  visibility: hidden;
 }
 
 .child_open {
-  left: 0% !important;
   right: 0% !important;
   display: block !important;
+  visibility: visible !important;
+  left: 0% !important;
+  width: 100% !important;
+}
+
+@keyframes bubble {
+  100% {
+    left: 0% !important;
+  }
+}
+
+@-webkit-keyframes bubble {
+  100% {
+    left: 0% !important;
+  }
 }
 
 .child_close {
